@@ -1,0 +1,16 @@
+body {
+  overflow: auto;
+}
+#___gatsby {
+  /* height: 100%; */
+}
+
+#___gatsby > div {
+  /* height: inherit; */
+}
+
+.Site__Wrapper {
+  /* display: flex;
+  flex-direction: column;
+  height: inherit; */
+}

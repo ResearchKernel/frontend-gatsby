@@ -3,7 +3,7 @@ module.exports = {
     title: 'Gatsby Antd Starter',
     description:
       'Kick off your next, great Gatsby project with this antd starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@cardiv',
+    author: 'Tushar Mudgal',
   },
   plugins: [
     {

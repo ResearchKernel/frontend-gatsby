@@ -1,13 +1,30 @@
 .Navbar {
-  background-color: #ffffff;
-  display: flex;
-  padding: 0 1rem;
+  left: 0px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 80;
+  flex: 0 1 0%;
   height: 48px;
-  font-family: sans-serif;
-  color: #000000;
+  background-color: rgb(255, 255, 255);
   border-bottom: 1px solid rgb(237, 239, 241);
-  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  box-sizing: border-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 0 20px;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 .Navbar__Link {
   padding-right: 8px;
@@ -94,7 +111,7 @@
     cursor: pointer;
   }
   .Navbar__Items-mobile {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     height: 100%;
