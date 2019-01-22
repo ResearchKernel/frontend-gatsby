@@ -17,10 +17,10 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div className="Site__Wrapper">
+      <>
         <Header siteTitle={data.site.siteMetadata.title} />
         {children}
-      </div>
+      </>
     )}
   />
 )

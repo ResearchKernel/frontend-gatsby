@@ -70,7 +70,7 @@
   margin: 10px;
 }
 .Navbar__Links:not(:last-child):hover {
-  background: #ccc;
+  /* background: #ccc; */
   border-radius: 3px;
   /* padding: 4px 8px; */
 }
@@ -110,15 +110,22 @@
     position: absolute;
     cursor: pointer;
   }
-  .Navbar__Items-mobile {
+  /* .Navbar__Items-mobile {
+    display: none;
     position: fixed;
     right: 0;
-    top: 0;
+    top: 48px;
     height: 100%;
     background: #1a1a1a;
     width: 200px;
     z-index: 1;
     color: #fff;
+    -moz-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+  }
+  .Navbar__Items-mobileitems {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -131,5 +138,5 @@
     padding-left: 8px;
     width: 100%;
     justify-content: center;
-  }
+  } */
 }

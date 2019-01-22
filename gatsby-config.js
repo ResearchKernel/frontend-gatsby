@@ -6,6 +6,8 @@ module.exports = {
     author: 'Tushar Mudgal',
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sass`,
     {
       resolve: 'gatsby-plugin-less',
       options: {

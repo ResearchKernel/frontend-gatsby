@@ -5,12 +5,10 @@ import { useWindowWidth } from '../../hooks'
 
 const Home = () => {
   const width = useWindowWidth()
+  const isMobile = width < 757
   return (
     <>
-      <div
-        className="Sidebar"
-        style={width < 757 ? { display: 'none' } : { display: 'initial' }}
-      >
+      <div className="Sidebar" style={isMobile ? { width: 0 } : { width: 220 }}>
         <div className="Sidebar__Filter">
           <div className="Sidebar-Label">My Subscriptions</div>
           <input type="text" placeholder="Filter" />
@@ -33,7 +31,12 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="Content">Content</div>
+      <div
+        className="Content"
+        style={isMobile ? { paddingLeft: 0 } : { paddingLeft: 220 }}
+      >
+        Content
+      </div>
     </>
   )
 }

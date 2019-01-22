@@ -3,14 +3,14 @@ import React, { useState } from 'react'
 import { Input, Divider, Button, Modal } from 'antd'
 import { FaBars, FaGlobe, FaFire } from 'react-icons/fa'
 import './header.css'
+import Dropdown from '../dropdown/dropdown.component'
 
 const Header = () => {
   const [visible, setModal] = useState(false)
   const [type, setType] = useState('')
+  // const [isNavVisible, setToggleNav] = useState(false)
   const toggleSideNav = e => {
-    document
-      .getElementsByClassName('.Navbar__Items-mobile')
-      .style('display', 'none')
+    // setToggleNav(!isNavVisible)
   }
   const showLoginSignupModal = e => {
     const { type } = e.target.dataset
@@ -33,11 +33,20 @@ const Header = () => {
         type="text"
         placeholder="Search"
       />
-      <nav className="Navbar__Items-mobile">
-        <div className="Navbar__Link">Link</div>
-        <div className="Navbar__Link">Link</div>
-        <div className="Navbar__Link">Link</div>
-      </nav>
+      {/* <nav
+        className="Navbar__Items-mobile"
+        style={
+          isNavVisible
+            ? { display: 'initial', width: 200 }
+            : { display: 'none', width: 0 }
+        }
+      >
+        <div className="Navbar__Items-mobileitems">
+          <div className="Navbar__Link">Link</div>
+          <div className="Navbar__Link">Link</div>
+          <div className="Navbar__Link">Link</div>
+        </div>
+      </nav> */}
       <nav className="Navbar__Items">
         <div className="Navbar__Links flexLeft">
           <FaGlobe />
@@ -64,6 +73,7 @@ const Header = () => {
             SIGN UP
           </Button>
         </div>
+        <Dropdown />
       </nav>
 
       <Modal
