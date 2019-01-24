@@ -36,6 +36,7 @@ const Home = () => {
         style={isMobile ? { paddingLeft: 0 } : { paddingLeft: 220 }}
       >
         Content
+        <footer>Copyrights &copy;2019. All Rights Reserved</footer>
       </div>
     </>
   )

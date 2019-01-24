@@ -1,0 +1,37 @@
+@keyframes heading {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@-webkit-keyframes heading {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.content {
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px grey;
+  background-color: beige;
+  margin: auto;
+  width: 90%;
+  padding: 15px;
+  position: absolute;
+  top: 48px;
+  right: 0;
+  left: 0;
+  animation-name: heading;
+  animation-duration: 2s;
+  -webkit-animation-name: heading;
+  -webkit-animation-duration: 2s;
+}
+
+.content h1,h2 {
+  text-align: center;
+}
+
+.Card_List {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -6,7 +6,8 @@
   z-index: 80;
   flex: 0 1 0%;
   height: 48px;
-  background-color: rgb(255, 255, 255);
+  background-color: #4d004d;
+  opacity: 0.8;
   border-bottom: 1px solid rgb(237, 239, 241);
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -26,97 +27,135 @@
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
+
 .Navbar__Link {
   padding-right: 8px;
 }
+
 .Navbar__Link-brand {
   width: 100px;
 }
+
 .Navbar__Link-brand img {
   margin-bottom: 0;
 }
+
 .Navbar__Items {
   display: flex;
 }
+
 .Navbar__Items .Navbar__Link {
   margin: 0;
 }
+
 .Navbar__Link-toggle {
   display: none;
 }
+
 .Navbar__Items-mobile {
   display: none;
 }
+
 .Navbar__Links:not(:last-child) {
   margin-right: 0.5rem;
 }
+
 .Navbar__Links button {
   border-radius: 2px;
 }
+
 .Navbar__Links button:first-child {
   margin-right: 0.5rem;
 }
+
 .Navbar__Links {
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.Navbar__Links a {
+  cursor: pointer;
+  color: #f99;
+}
+
+.Navbar__Links a:hover {
+  color: #ff9;
+}
+
+.Navbar__Links a[aria-current="page"] {
+  border-bottom: 1px solid red;
+}
+
 .Navbar__Links:last-child {
   padding-left: 20px;
   padding-right: 20px;
 }
+
 .Navbar__Links svg {
   margin: 10px;
 }
+
 .Navbar__Links:not(:last-child):hover {
   /* background: #ccc; */
   border-radius: 3px;
   /* padding: 4px 8px; */
 }
+
 .flexRight {
   display: flex;
   flex-direction: row;
   justify-content: right;
   align-items: center;
 }
+
 .flexLeft {
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
 }
+
+
 @media only screen and (max-width: 768px) {
+
   .Navbar input {
     display: none;
   }
+
   .Navbar__Items,
   .Navbar {
     flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
   }
+
   .Navbar__Items {
     display: none;
   }
+
   .Navbar__Items .Navbar__Link {
     margin: 1rem 0;
   }
+
   .Navbar__ToggleShow {
     display: flex;
   }
+
   .Navbar__Link-toggle {
     align-self: flex-end;
     display: initial;
     position: absolute;
     cursor: pointer;
   }
-  /* .Navbar__Items-mobile {
-    display: none;
+
+  .Navbar__Items-mobile {
+    display: block;
     position: fixed;
     right: 0;
     top: 48px;
     height: 100%;
-    background: #1a1a1a;
+    /*background: #1a1a1a;*/
     width: 200px;
     z-index: 1;
     color: #fff;
@@ -125,12 +164,14 @@
     -webkit-transition: width 0.3s ease-in-out;
     transition: width 0.3s ease-in-out;
   }
+
   .Navbar__Items-mobileitems {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
   }
+
   .Navbar__Items-mobile .Navbar__Link {
     height: 36px;
     align-items: center;
@@ -138,5 +179,84 @@
     padding-left: 8px;
     width: 100%;
     justify-content: center;
-  } */
+  } 
 }
+
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+
+label .menu {
+  position: absolute;
+  right: -100px;
+  top: -100px;
+  z-index: 100;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border-radius: 50% 50% 50% 50%;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+  cursor: pointer;
+}
+label .hamburger {
+  position: absolute;
+  top: 75px;
+  left: 50px;
+  width: 30px;
+  height: 2px;
+  background: #000;
+  display: block;
+  transform-origin: center;
+  transition: 0.5s ease-in-out;
+}
+label .hamburger:after, label .hamburger:before {
+  transition: 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+label .hamburger:before {
+  top: -10px;
+}
+label .hamburger:after {
+  bottom: -10px;
+}
+label input {
+  display: none;
+}
+label input:checked + .menu {
+  box-shadow: 0 0 0 100vw #fff, 0 0 0 100vh #fff;
+  border-radius: 0;
+}
+label input:checked + .menu .hamburger {
+  transform: rotate(45deg);
+}
+label input:checked + .menu .hamburger:after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+label input:checked + .menu .hamburger:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+label input:checked + .menu + ul {
+  opacity: 1;
+}
+label ul {
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.25s 0s ease-in-out;
+}
+label a {
+  margin-bottom: 1em;
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+

@@ -1,61 +1,90 @@
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import { Input, Divider, Button, Modal } from 'antd'
-import { FaBars, FaGlobe, FaFire } from 'react-icons/fa'
+import { Link } from 'gatsby'
 import './header.css'
 import Dropdown from '../dropdown/dropdown.component'
 
 const Header = () => {
   const [visible, setModal] = useState(false)
   const [type, setType] = useState('')
-  // const [isNavVisible, setToggleNav] = useState(false)
-  const toggleSideNav = e => {
+  const [isNavVisible, setToggleNav] = useState(false)
+
+  /*const toggleSideNav = e => {
     // setToggleNav(!isNavVisible)
+    setToggleNav(!isNavVisible)
   }
+  */
   const showLoginSignupModal = e => {
     const { type } = e.target.dataset
     setType(type)
     setModal(true)
   }
+
   return (
     <div className="Navbar">
       <div className="Navbar__Link Navbar__Link-brand">
-        <img
+        <Link to='/'><img
           src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo3.png"
           alt="logo"
-        />
-      </div>
-      <div className="Navbar__Link Navbar__Link-toggle" onClick={toggleSideNav}>
-        <FaBars />
+        /></Link>
       </div>
       <Input
         style={{ width: '500px', borderRadius: 2 }}
         type="text"
         placeholder="Search"
       />
-      {/* <nav
+      {/*<div className="Navbar__Link Navbar__Link-toggle" onClick={toggleSideNav}>
+        <FaBars />
+      </div>*/}
+       <nav
         className="Navbar__Items-mobile"
-        style={
-          isNavVisible
-            ? { display: 'initial', width: 200 }
-            : { display: 'none', width: 0 }
-        }
+        
       >
-        <div className="Navbar__Items-mobileitems">
+        <label>
+          <input type="checkbox"></input>
+          <span className="menu Navbar__Link Navbar__Link-toggle">
+            <span className="hamburger"></span>
+          </span>
+          <ul>
+            <li>
+              <Link to='/about'>About</Link>
+            </li>
+            <li>
+              <Link to='/team'>Team</Link>
+            </li>
+            <li>
+              <Link to='/donate'>Donate</Link>
+            </li>
+            <li>
+              <Link to='/contact'>Contact</Link>
+            </li>
+            <li>
+              <a href="https://github.com/researchkernel" target="_blank">GitHub</a>
+            </li>
+          </ul>
+        </label>
+        {/*<div className="Navbar__Items-mobileitems">
           <div className="Navbar__Link">Link</div>
           <div className="Navbar__Link">Link</div>
           <div className="Navbar__Link">Link</div>
-        </div>
-      </nav> */}
+        </div>*/}
+      </nav>
       <nav className="Navbar__Items">
         <div className="Navbar__Links flexLeft">
-          <FaGlobe />
+          <Link to='/about'>About</Link>
         </div>
         <div className="Navbar__Links flexLeft">
-          <FaFire />
+          <Link to='/team'>Team</Link>
         </div>
         <div className="Navbar__Links flexLeft">
-          <FaGlobe />
+          <Link to='/donate'>Donate</Link>
+        </div>
+        <div className="Navbar__Links flexLeft">
+          <Link to='/contact'>Contact</Link>
+        </div>
+        <div className="Navbar__Links flexLeft">
+          <a href="https://github.com/researchkernel" target="_blank">GitHub</a>
         </div>
         <Divider
           style={{
