@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FaBars, FaGlobe, FaFire } from 'react-icons/fa'
-import { SkeletonSidebar } from '../skeletons'
+// import { SkeletonSidebar } from '../skeletons'
 import list from '../../list.json'
 
 const CategoryList = () => {
