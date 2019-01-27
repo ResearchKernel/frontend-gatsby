@@ -1,17 +1,15 @@
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import { Input, Divider, Button, Modal } from 'antd'
-import { FaBars, FaGlobe, FaFire } from 'react-icons/fa'
+import classNames from 'classnames'
+import { FaGlobe, FaFire } from 'react-icons/fa'
 import './header.css'
 import Dropdown from '../dropdown/dropdown.component'
 
 const Header = () => {
   const [visible, setModal] = useState(false)
   const [type, setType] = useState('')
-  // const [isNavVisible, setToggleNav] = useState(false)
-  const toggleSideNav = e => {
-    // setToggleNav(!isNavVisible)
-  }
+  const [isNavVisible, setToggleNav] = useState(false)
   const showLoginSignupModal = e => {
     const { type } = e.target.dataset
     setType(type)
@@ -25,28 +23,31 @@ const Header = () => {
           alt="logo"
         />
       </div>
-      <div className="Navbar__Link Navbar__Link-toggle" onClick={toggleSideNav}>
-        <FaBars />
+      <div
+        className="Navbar__Link Navbar__Link-toggle"
+        onClick={() => setToggleNav(!isNavVisible)}
+      >
+        <button
+          className={classNames('hamburger hamburger--spring', {
+            'is-active': isNavVisible,
+          })}
+          type="button"
+        >
+          <span
+            className="hamburger-box"
+            style={{
+              fontSize: 12,
+            }}
+          >
+            <span className="hamburger-inner" />
+          </span>
+        </button>
       </div>
       <Input
         style={{ width: '500px', borderRadius: 2 }}
         type="text"
         placeholder="Search"
       />
-      {/* <nav
-        className="Navbar__Items-mobile"
-        style={
-          isNavVisible
-            ? { display: 'initial', width: 200 }
-            : { display: 'none', width: 0 }
-        }
-      >
-        <div className="Navbar__Items-mobileitems">
-          <div className="Navbar__Link">Link</div>
-          <div className="Navbar__Link">Link</div>
-          <div className="Navbar__Link">Link</div>
-        </div>
-      </nav> */}
       <nav className="Navbar__Items">
         <div className="Navbar__Links flexLeft">
           <FaGlobe />

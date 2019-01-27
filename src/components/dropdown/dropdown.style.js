@@ -8,6 +8,7 @@ export const DropdownMenu = styled.div`
   width: 120px;
   background: #fff;
   border: 1px solid #ccc;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   div {
     display: flex;
     flex-flow: column nowrap;
@@ -25,7 +26,6 @@ export const DropdownMenu = styled.div`
 
 export const Dropdown = styled.button`
   position: relative;
-
   border-color: rgb(237, 239, 241);
   outline: none;
   -webkit-box-align: center;
@@ -39,12 +39,15 @@ export const Dropdown = styled.button`
   border-style: solid;
   border-image: initial;
   padding: 2px 6px;
-  /* &:hover { */
   cursor: pointer;
-  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  position: relative;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
   background-color: #fff;
-  border-color: #d9d9d9;
-  /* } */
+  .arrow-rotate {
+    -webkit-transition: -webkit-transform 0.8s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
 `
