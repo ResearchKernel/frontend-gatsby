@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import { Input, Divider, Button, Modal } from 'antd'
+
 import { Link } from 'gatsby'
+
+import classNames from 'classnames'
+import { FaGlobe, FaFire } from 'react-icons/fa'
+
 import './header.css'
 import Dropdown from '../dropdown/dropdown.component'
 
@@ -10,11 +15,13 @@ const Header = () => {
   const [type, setType] = useState('')
   const [isNavVisible, setToggleNav] = useState(false)
 
+
   /*const toggleSideNav = e => {
     // setToggleNav(!isNavVisible)
     setToggleNav(!isNavVisible)
   }
   */
+
   const showLoginSignupModal = e => {
     const { type } = e.target.dataset
     setType(type)
@@ -27,13 +34,38 @@ const Header = () => {
         <Link to='/'><img
           src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo3.png"
           alt="logo"
+
         /></Link>
+
+        />
+      </div>
+      <div
+        className="Navbar__Link Navbar__Link-toggle"
+        onClick={() => setToggleNav(!isNavVisible)}
+      >
+        <button
+          className={classNames('hamburger hamburger--spring', {
+            'is-active': isNavVisible,
+          })}
+          type="button"
+        >
+          <span
+            className="hamburger-box"
+            style={{
+              fontSize: 12,
+            }}
+          >
+            <span className="hamburger-inner" />
+          </span>
+        </button>
+
       </div>
       <Input
         style={{ width: '500px', borderRadius: 2 }}
         type="text"
         placeholder="Search"
       />
+
       {/*<div className="Navbar__Link Navbar__Link-toggle" onClick={toggleSideNav}>
         <FaBars />
       </div>*/}
@@ -70,6 +102,7 @@ const Header = () => {
           <div className="Navbar__Link">Link</div>
         </div>*/}
       </nav>
+
       <nav className="Navbar__Items">
         <div className="Navbar__Links flexLeft">
           <Link to='/about'>About</Link>
