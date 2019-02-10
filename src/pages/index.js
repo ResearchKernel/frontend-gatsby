@@ -4,6 +4,8 @@ import SEO from '../components/seo'
 import Home from '../components/home/home.component'
 import '../base.css'
 
+
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={['gatsby', 'application', 'react']} />

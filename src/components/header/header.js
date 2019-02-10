@@ -43,8 +43,8 @@ const Header = () => {
           </span>
         </button>
       </div>
-      <Input
-        style={{ width: '500px', borderRadius: 2 }}
+      <Input className="searchBar"
+        style={{ width: '500px' }}
         type="text"
         placeholder="Search"
       />
