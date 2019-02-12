@@ -1,3 +1,4 @@
+/* Styles general to about, team, contact pages*/
 html {
 	height: 100%;
 	overflow: hidden;
@@ -30,15 +31,6 @@ h2 {
   text-shadow: 1px 1px 2px white;
 }
 
-.about-section_details {
-  margin: 50px 0;
-  border: 1px solid rgba(200,200,200,0.7);
-  border-radius: 10px;
-  background-color: rgba(128,128,128,0.8);
-  box-shadow: 0 0 10px black;
-  padding: 0 5px;
-}
-
 .content .section:nth-child(odd) {
   background-attachment: fixed;
   box-shadow: 5px 5px 5px gray;
@@ -48,6 +40,16 @@ h2 {
   transform: translateZ(-1px) scale(2);
   z-index: -1;
   box-shadow: -5px 5px 5px gray;
+}
+
+/*Styles for about page*/
+.about-section_details {
+  margin: 50px 0;
+  border: 1px solid rgba(200,200,200,0.7);
+  border-radius: 10px;
+  background-color: rgba(128,128,128,0.8);
+  box-shadow: 0 0 10px black;
+  padding: 0 5px;
 }
 
 #about-title {
@@ -70,3 +72,30 @@ h2 {
 #about-section2 ul {
   list-style: circle inside url('https://images.pexels.com/photos/47367/full-moon-moon-bright-sky-47367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=10&w=10');
 }
+
+/*Styles for team page*/
+.about-section_details {
+  margin: 50px 0;
+  border: 1px solid rgba(200,200,200,0.7);
+  border-radius: 10px;
+  background-color: rgba(128,128,128,0.8);
+  box-shadow: 0 0 10px black;
+  padding: 0 5px;
+}
+
+#team-title {
+  background-image: url("https://images.pexels.com/photos/1246743/pexels-photo-1246743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#team-section1 {
+  background-image: url("https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
