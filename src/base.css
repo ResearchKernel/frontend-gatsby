@@ -1,5 +1,5 @@
 body {
-  overflow: auto;
+  overflow: hidden scroll;
 }
 #___gatsby {
   /* height: 100%; */

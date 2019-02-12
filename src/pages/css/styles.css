@@ -1,0 +1,72 @@
+html {
+	height: 100%;
+	overflow: hidden;
+}
+  
+body { 
+	margin:0;
+	padding:0;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+  perspective: 1px;
+  background-color: black;
+}
+  
+.section {
+  padding: 100px 50px;
+	position: relative;
+	height: 700px;
+  width: 100%;
+  box-sizing: border-box;
+  background: 50% 50% / cover;
+  text-align: center;
+  color: black;
+}
+
+.section 
+h1,
+h2 {
+  text-shadow: 1px 1px 2px white;
+}
+
+.about-section_details {
+  margin: 50px 0;
+  border: 1px solid rgba(200,200,200,0.7);
+  border-radius: 10px;
+  background-color: rgba(128,128,128,0.8);
+  box-shadow: 0 0 10px black;
+  padding: 0 5px;
+}
+
+.content .section:nth-child(odd) {
+  background-attachment: fixed;
+  box-shadow: 5px 5px 5px gray;
+}
+  
+.content .section:nth-child(even) {
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  box-shadow: -5px 5px 5px gray;
+}
+
+#about-title {
+  background-image: url("https://images.pexels.com/photos/220201/pexels-photo-220201.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#about-section1 {
+  background-image: url("https://images.pexels.com/photos/1194775/pexels-photo-1194775.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#about-section2 {
+  background-image: url("https://images.pexels.com/photos/532173/pexels-photo-532173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  text-align: justify;
+}
+
+#about-section2 label {
+  font-weight: bold;
+}
+
+#about-section2 ul {
+  list-style: circle inside url('https://images.pexels.com/photos/47367/full-moon-moon-bright-sky-47367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=10&w=10');
+}
