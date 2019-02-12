@@ -1,44 +1,39 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Header from '../components/header/header'
 import './css/styles.css'
-import laptop from './img/about-laptop.jpeg'
 
-class About extends Component {
-  /*componentDidMount() {
-    window.addEventListener('scroll', () => {
-      let parent = document.getElementById('parallax-container');
-      let children = parent.getElementsByTagName('div');
-      for(let i = 0; i < children.length; i++) {
-        children[i].style.transform = 'translateY(-' + (window.pageYOffset * i / children.length) + 'px)';
-      }
-    }, false)
-  }*/
+const About = () => (
+  <div>
+    <Header />
+    <main className="content">
 
-  scrollEvent = (e) => {
-    let parent = document.getElementById('parallax-container');
-      let children = parent.getElementsByTagName('div');
-      for(let i = 0; i < children.length; i++) {
-        children[i].style.transform = 'translateY(-' + (window.pageYOffset * i / children.length) + 'px)';
-      }
+      <section id="about-title" className="section header" >
+        <h1>About Us</h1>
+      </section>
 
-  }
-  render() {
-    return (
-      <div>
-        
-        <div id="parallax-container" onScroll={this.scrollEvent}>
-          <div style={{backgroundImage: `url('https://cdn2.hubspot.net/hubfs/1951013/Parallax/SkyBG.png')`}}></div>
-          <div style={{backgroundImage: `url('https://cdn2.hubspot.net/hubfs/1951013/Parallax/Clouds1.png')`}}></div>
-          <div style={{backgroundImage: `url('https://cdn2.hubspot.net/hubfs/1951013/Parallax/Clouds2.png')`}}></div>
+      <section id="about-section1" className="section">
+        <div className="about-section_details">
+          <h2>ResearchKernel</h2>
+          <p>A Platform to the Researchers, for the Researchers and by the Researchers.</p>
         </div>
-        <div id="content">
-        <h1>Parallax Effect</h1>
-          <p>The parallax code is from Collin Delphia's CodePen <a href="https://codepen.io/Kikoku/pen/PWyyVg">here</a>.</p>
-          <p>I created the artwork in Adobe Illustrator based on the Animal Silhouette Moonlight Vector Illustration - Illustrator Tutorial by tutvid <a href="https://www.youtube.com/watch?v=RtnCn65MdN0">here</a>.</p>
-      </div>
-      </div>
-    )
-  }
-}
+      </section>
+
+      <section id="about-section2" className="section">
+        <div className="about-section_details">
+          <p>
+            Our objective at Research Kernel is to not only provide a platform for you to perform Research but also make it interactive. With Personalised Recommendations, we make the tedious task of searching easier. It's a community-driven interface ensuring that you find the
+            Features Available but not limited to:
+          </p>
+          <ul>
+            <li><label htmlFor="list-item-1">Personalised Recommendation:</label> <span id="list-item-1">To show you only what's relevant to you and save time from going through unnecessary Search Results.</span></li>
+            <li><label htmlFor="list-item-2">Community Forum:</label> <span id="list-item-2">For you to find like-minded people and find collaborators for your projects.</span></li>
+            <li><label htmlFor="list-item-3">Similar Papers:</label> <span id="list-item-3">Can't find what you're looking for? This feature will help you find relevant papers for your research.</span></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+)
 
 export default About
