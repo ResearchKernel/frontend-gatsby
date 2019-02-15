@@ -1,5 +1,5 @@
 {
-  "astro-ph": {
+  "physics:astro-ph": {
     "name": "Astro Physics",
     "sub": {
       "astro-ph": {
@@ -25,7 +25,7 @@
       }
     }
   },
-  "cond-mat": {
+  "physics:cond-mat": {
     "name": "cond-mat",
     "sub": {
       "cond-mat.dis-nn": {
@@ -204,7 +204,7 @@
       }
     }
   },
-  "gr-qc": {
+  "physics:gr-qc": {
     "name": "General Relativity and Quantum Cosmology",
     "sub": {
       "gr-qc": {
@@ -333,7 +333,7 @@
       }
     }
   },
-  "nlin": {
+  "physics:nlin": {
     "name": "nlin",
     "sub": {
       "nlin.AO": {
@@ -364,7 +364,7 @@
       }
     }
   },
-  "physics": {
+  "physics:physics": {
     "name": "Physics",
     "sub": {
       "physics.acc-ph": {
@@ -502,7 +502,7 @@
       }
     }
   },
-  "quant-ph": {
+  "physics:quant-ph": {
     "name": "Quantum Physics",
     "sub": {
       "quant-ph": {
