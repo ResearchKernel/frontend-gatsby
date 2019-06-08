@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
-import { Input, Divider, Button, Modal } from 'antd'
+import { Button, Modal } from 'antd'
 import classNames from 'classnames'
-import { FaGlobe, FaFire } from 'react-icons/fa'
 import './header.css'
 import Dropdown from '../dropdown/dropdown.component'
+import { Link } from 'gatsby'
 
 const Header = () => {
   const [visible, setModal] = useState(false)
@@ -36,36 +36,35 @@ const Header = () => {
           <span
             className="hamburger-box"
             style={{
-              fontSize: 12,
+              fontSize: 15,
             }}
           >
             <span className="hamburger-inner" />
           </span>
         </button>
       </div>
-      <Input
-        style={{ width: '500px', borderRadius: 2 }}
-        type="text"
-        placeholder="Search"
-      />
+      <li>
+        <Link to="/about">About us</Link>
+      </li>
+      <li>
+        <Link to="/community">Community</Link>
+      </li>
+      <li>
+        <Link to="/team">Team</Link>
+      </li>
+      <li>
+        <Link to="/joinus">Join Us</Link>
+      </li>
+      <li>
+        <Link to="/donate">Donate Us</Link>
+      </li>
+      <li>
+        <Link to="/blog">Blog</Link>
+      </li>
+      <li>
+        <Link to="/">Search Bar</Link>
+      </li>
       <nav className="Navbar__Items">
-        <div className="Navbar__Links flexLeft">
-          <FaGlobe />
-        </div>
-        <div className="Navbar__Links flexLeft">
-          <FaFire />
-        </div>
-        <div className="Navbar__Links flexLeft">
-          <FaGlobe />
-        </div>
-        <Divider
-          style={{
-            height: 34,
-            top: 0,
-            bottom: 0,
-          }}
-          type="vertical"
-        />
         <div className="Navbar__Links" onClick={showLoginSignupModal}>
           <Button data-type="log in" type="default">
             LOG IN
