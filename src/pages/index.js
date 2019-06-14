@@ -17,7 +17,6 @@ const IndexPage = () => (
         'arxiv.org',
       ]}
     />
-    <Header />
     <Home />
   </Layout>
 )

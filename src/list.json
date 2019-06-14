@@ -191,7 +191,7 @@
     }
   },
   "eess": {
-    "name": "eess",
+    "name": "Electrical Engineering and Systems Science",
     "sub": {
       "eess.AS": {
         "category": "Audio and Speech Processing"
@@ -334,7 +334,7 @@
     }
   },
   "physics:nlin": {
-    "name": "nlin",
+    "name": "Nonlinear Sciences",
     "sub": {
       "nlin.AO": {
         "category": "Adaptation and Self-Organizing Systems"
