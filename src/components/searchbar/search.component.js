@@ -1,36 +1,107 @@
-import React from "react";
+import { AutoComplete, Icon, Input } from 'antd'
+import React from 'react'
 
-import { Input } from "antd";
+const { Option, OptGroup } = AutoComplete
 
-const Search = Input.Search;
+const Search = Input.Search
 
-class SearchBoxComponent extends React.Component {
-  state = {
-    dataSource: []
-  };
+const dataSource = [
+  {
+    title: 'Libraries',
+    children: [
+      {
+        title: 'AntDesign',
+        count: 10000,
+      },
+      {
+        title: 'AntDesign UI',
+        count: 10600,
+      },
+    ],
+  },
+  {
+    title: 'Solutions',
+    children: [
+      {
+        title: 'AntDesign UI',
+        count: 60100,
+      },
+      {
+        title: 'AntDesign',
+        count: 30010,
+      },
+    ],
+  },
+  {
+    title: 'Articles',
+    children: [
+      {
+        title: 'AntDesign design language',
+        count: 100000,
+      },
+    ],
+  },
+]
 
-  handleSearch = value => {
-    console.log(value)
-  };
-
-  fetchArxivData() {
-
-  }
-
-  render() {
-    return (
-      <div style={{ flex: 1 }}>
-        <div className="global-search-wrapper" style={{ 'padding-bottom': 50, 'padding-top': 100, 'padding-left': 290, 'width': 1100 }}>
-          <Search
-            placeholder="Search"
-            enterButton
-            onSearch={value => this.handleSearch(value)}
-          />
-        </div>
-      </div>
-    );
-  }
+function renderTitle(title) {
+  return (
+    <span>
+      {title}
+      <a
+        style={{ float: 'right' }}
+        href="https://www.google.com/search?q=antd"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        more
+      </a>
+    </span>
+  )
 }
 
+const options = dataSource
+  .map(group => (
+    <OptGroup key={group.title} label={renderTitle(group.title)}>
+      {group.children.map(opt => (
+        <Option key={opt.title} value={opt.title}>
+          {opt.title}
+          <span className="certain-search-item-count">{opt.count} people</span>
+        </Option>
+      ))}
+    </OptGroup>
+  ))
+  .concat([
+    <Option disabled key="all" className="show-all">
+      <a
+        href="https://www.google.com/search?q=antd"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View all results
+      </a>
+    </Option>,
+  ])
 
-export default (SearchBoxComponent);
+function search() {
+  return (
+    <div className="certain-category-search-wrapper" style={{ width: 250 }}>
+      <AutoComplete
+        className="certain-category-search"
+        dropdownClassName="certain-category-search-dropdown"
+        dropdownMatchSelectWidth={false}
+        dropdownStyle={{ width: 300 }}
+        size="large"
+        style={{ width: '100%' }}
+        dataSource={options}
+        placeholder="input here"
+        optionLabelProp="value"
+      >
+        <Input
+          suffix={<Icon type="search" className="certain-category-icon" />}
+        />
+      </AutoComplete>
+    </div>
+  )
+}
+
+export default search

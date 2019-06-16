@@ -6,8 +6,8 @@ function joinus() {
     <div>
       <Header />
       <h1> JOIN US ON OUR MISSION</h1>
-
       <p>We are statrting a new eara of research.</p>
+      <p>THATS IT.</p>
     </div>
   )
 }

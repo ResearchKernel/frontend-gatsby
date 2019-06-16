@@ -14,9 +14,9 @@ function blog() {
     <Fragment>
       <Header />
       <Content style={{ padding: '0 50px', marginTop: 60 }}>
-        <h1>Research Kenel Blogs</h1>
+        <h1>Research Kernel Blogs</h1>
         <br />
-        <h3>Tech Blogs</h3>
+        <h3> Machine Learning </h3>
         <Row gutter={8}>
           <Col span={6}>
             <Card
@@ -35,7 +35,7 @@ function blog() {
               ]}
             >
               <Meta
-                title="Search Enginer in Elastic Search on top of AWS SPOT Instances"
+                title="Recommendation Systems Part 1"
                 description="We have to get data from community.researchkernel.org"
               />
             </Card>
@@ -111,66 +111,7 @@ function blog() {
           </Col>
         </Row>
         <br />
-        <Row gutter={8}>
-          <Col span={6}>
-            <Card
-              hoverable
-              style={{ width: 'auto' }}
-              cover={
-                <img
-                  alt="example"
-                  src="http://www.massey.ac.nz/massey/fms/Colleges/College%20of%20Sciences/INMS/Research/Physics/nonlinearwaves.jpg"
-                />
-              }
-              actions={[
-                <Icon type="setting" />,
-                <Icon type="edit" />,
-                <Icon type="ellipsis" />,
-              ]}
-            >
-              <Meta
-                title="Nonlinear Sciences"
-                description="www.instagram.com"
-              />
-            </Card>
-          </Col>
-          <Col span={6}>
-            <Card
-              hoverable
-              style={{ width: 'auto' }}
-              cover={<img alt="example" src="" />}
-              actions={[
-                <Icon type="setting" />,
-                <Icon type="edit" />,
-                <Icon type="ellipsis" />,
-              ]}
-            >
-              <Meta title="Physics" description="www.instagram.com" />
-            </Card>
-          </Col>
-          <Col span={6}>
-            <Card
-              hoverable
-              style={{ width: 'auto' }}
-              cover={
-                <img
-                  alt="example"
-                  src="http://www.sissa.it/app/images/wallpaper.jpg"
-                />
-              }
-              actions={[
-                <Icon type="setting" />,
-                <Icon type="edit" />,
-                <Icon type="ellipsis" />,
-              ]}
-            >
-              <Meta title="Quantum Physics" description="www.instagram.com" />
-            </Card>
-          </Col>
-        </Row>
-        <br />
-
-        <h1>Computer Science</h1>
+        <h3> AWS Cloud Platfrom </h3>
         <br />
         <Row gutter={8}>
           <Col span={6}>
@@ -197,8 +138,7 @@ function blog() {
           </Col>
         </Row>
         <br />
-
-        <h1>Maths</h1>
+        <h3> Search Engine </h3>
         <Row gutter={8}>
           <Col span={6}>
             <Card
@@ -224,8 +164,7 @@ function blog() {
           </Col>
         </Row>
         <br />
-
-        <h1> Econometrics </h1>
+        <h3> Docker and Kubernetes </h3>
         <Row gutter={8}>
           <Col span={6}>
             <Card
@@ -247,151 +186,9 @@ function blog() {
             </Card>
           </Col>
         </Row>
-
-        <h1>Electrical Engineering and Systems Science</h1>
-        <Row gutter={8}>
-          <Col span={6}>
-            <Card
-              hoverable
-              style={{ width: 'auto' }}
-              cover={
-                <img
-                  alt="example"
-                  src="http://www.sissa.it/app/images/wallpaper.jpg"
-                />
-              }
-              actions={[
-                <Icon type="setting" />,
-                <Icon type="edit" />,
-                <Icon type="ellipsis" />,
-              ]}
-            >
-              <Meta
-                title="Europe Street beat"
-                description="www.instagram.com"
-              />
-            </Card>
-          </Col>
-        </Row>
         <br />
-        <h1>Nuclear</h1>
+        <h3>How to start an Open Source Project? </h3>
         <Row gutter={8}>
-          <Col span={6}>
-            <Card
-              hoverable
-              style={{ width: 'auto' }}
-              cover={
-                <img
-                  alt="example"
-                  src="http://www.sissa.it/app/images/wallpaper.jpg"
-                />
-              }
-              actions={[
-                <Icon type="setting" />,
-                <Icon type="edit" />,
-                <Icon type="ellipsis" />,
-              ]}
-            >
-              <Meta
-                title="Europe Street beat"
-                description="www.instagram.com"
-              />
-            </Card>
-          </Col>
-          <Col span={6}>
-            <Card
-              hoverable
-              style={{ width: 'auto' }}
-              cover={
-                <img
-                  alt="example"
-                  src="http://www.sissa.it/app/images/wallpaper.jpg"
-                />
-              }
-              actions={[
-                <Icon type="setting" />,
-                <Icon type="edit" />,
-                <Icon type="ellipsis" />,
-              ]}
-            >
-              <Meta
-                title="Europe Street beat"
-                description="www.instagram.com"
-              />
-            </Card>
-          </Col>
-        </Row>
-        <br />
-        <Row gutter={8}>
-          <Col span={6}>
-            <Card
-              hoverable
-              style={{ width: 'auto' }}
-              cover={
-                <img
-                  alt="example"
-                  src="http://www.sissa.it/app/images/wallpaper.jpg"
-                />
-              }
-              actions={[
-                <Icon type="setting" />,
-                <Icon type="edit" />,
-                <Icon type="ellipsis" />,
-              ]}
-            >
-              <Meta
-                title="Europe Street beat"
-                description="www.instagram.com"
-              />
-            </Card>
-          </Col>
-          <Col span={6}>
-            <Card
-              hoverable
-              style={{ width: 'auto' }}
-              cover={
-                <img
-                  alt="example"
-                  src="http://www.sissa.it/app/images/wallpaper.jpg"
-                />
-              }
-              actions={[
-                <Icon type="setting" />,
-                <Icon type="edit" />,
-                <Icon type="ellipsis" />,
-              ]}
-            >
-              <Meta
-                title="Europe Street beat"
-                description="www.instagram.com"
-              />
-            </Card>
-          </Col>
-        </Row>
-        <br />
-        <Row gutter={8}>
-          <Col span={6}>
-            <Card
-              hoverable
-              style={{ width: 'auto' }}
-              cover={
-                <img
-                  alt="example"
-                  src="http://www.sissa.it/app/images/wallpaper.jpg"
-                />
-              }
-              actions={[
-                <Icon type="setting" />,
-                <Icon type="edit" />,
-                <Icon type="ellipsis" />,
-              ]}
-            >
-              <Meta
-                title="Europe Street beat"
-                description="www.instagram.com"
-              />
-            </Card>
-          </Col>
           <Col span={6}>
             <Card
               hoverable
