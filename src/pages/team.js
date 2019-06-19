@@ -13,7 +13,7 @@ function team() {
         style={{
           background: '#ECECEC',
           paddingBottom: 5,
-          paddingTop: 100,
+          paddingTop: 20,
           paddingLeft: 150,
         }}
       >
