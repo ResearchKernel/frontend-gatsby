@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Col, Row, Icon, Avatar } from 'antd'
+import { Card, Col } from 'antd'
 const { Meta } = Card
 
 const CardWrapper = ({ altImage, source, title, description }) => (
@@ -7,7 +7,7 @@ const CardWrapper = ({ altImage, source, title, description }) => (
     <Card
       bordered={false}
       hoverable
-      style={{ width: 300, minHeight: 500 }}
+      style={{ width: 300, height: 500, overflow: "scroll" }}
       size="large"
       cover={<img alt={altImage} src={source} />}
     >
