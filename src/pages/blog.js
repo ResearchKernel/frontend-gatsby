@@ -14,9 +14,9 @@ function blog() {
     <Fragment>
       <Header />
       <Content style={{ padding: '0 50px', marginTop: 60 }}>
-        <h1>Research Kernel Blogs</h1>
+        <h1 textAlign="center">Research Kernel Blogs</h1>
         <br />
-        <h3> Machine Learning </h3>
+        <h3> Data Science and Machine Learning </h3>
         <Row gutter={8}>
           <Col span={6}>
             <Card

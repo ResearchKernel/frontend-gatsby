@@ -1,4 +1,4 @@
-import { Card, Col, Icon, Layout, Row, Divider } from 'antd'
+import { Card, Col, Icon, Layout, Row } from 'antd'
 import React, { Fragment } from 'react'
 import Header from '../components/header/header'
 
