@@ -83,12 +83,7 @@ class header extends React.Component {
       <div>
         <Header style={{ position: 'auto', zIndex: 1, width: '100%' }}>
           <div className="logo" />
-          <Menu
-            theme="dark"
-            mode="horizontal"
-            defaultSelectedKeys={['3']}
-            style={{ lineHeight: '64px' }}
-          >
+          <Menu theme="dark" mode="horizontal" style={{ lineHeight: '64px' }}>
             <Menu.Item key="Home">
               <Link to="/">Home</Link>
             </Menu.Item>
@@ -110,9 +105,9 @@ class header extends React.Component {
             <Menu.Item key="Blog">
               <Link to="/blog">Blog</Link>
             </Menu.Item>
-            <Menu.Item>
+            <Menu.Item style={{ float: 'right' }}>
               <Button type="primary" onClick={this.showModal}>
-                Log In
+                Sign Up
               </Button>
               <CollectionCreateForm
                 wrappedComponentRef={this.saveFormRef}
@@ -121,9 +116,9 @@ class header extends React.Component {
                 onCreate={this.handleCreate}
               />
             </Menu.Item>
-            <Menu.Item>
+            <Menu.Item style={{ float: 'right' }}>
               <Button type="primary" onClick={this.showModal}>
-                Sign Up
+                Log In
               </Button>
               <CollectionCreateForm
                 wrappedComponentRef={this.saveFormRef}
