@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../components/header/header'
 import { Card, Col, Row, Icon, Avatar } from 'antd'
-import CardWrapper from '../components/card'
+import CardWrapper from '../components/card/card.component'
 
 const { Meta } = Card
 
