@@ -84,16 +84,16 @@ const options = dataSource
 
 function search() {
   return (
-    <div className="certain-category-search-wrapper" style={{ width: 250 }}>
+    <div className="certain-category-search-wrapper" style={{ width: 'auto' }}>
       <AutoComplete
         className="certain-category-search"
         dropdownClassName="certain-category-search-dropdown"
-        dropdownMatchSelectWidth={false}
+        dropdownMatchSelectWidth={true}
         dropdownStyle={{ width: 300 }}
         size="large"
         style={{ width: '100%' }}
         dataSource={options}
-        placeholder="input here"
+        placeholder="eg: Machine Learning"
         optionLabelProp="value"
       >
         <Input
