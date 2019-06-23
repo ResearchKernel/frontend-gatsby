@@ -2,7 +2,11 @@ import { Card, Input, Layout, Row } from 'antd'
 import React from 'react'
 import CardWrapper from '../card/card.component'
 import SearchComponent from '../searchbar/search.component'
+import { connect } from 'react-redux'
+import { ping } from '../../redux/actions/actions'
+import { bindActionCreators } from 'redux'
 import './home.style.css'
+
 const { Content, Footer } = Layout
 const gridStyle = {
   width: '30%',
@@ -10,9 +14,11 @@ const gridStyle = {
 }
 const Search = Input.Search
 
-const Home = () => {
+const Home = props => {
   return (
     <div>
+      {console.log(props.pingState)}
+      <button onClick={props.ping}>Start PING</button>
       <Content style={{ padding: '0 50px', marginTop: 64 }}>
         <div style={{ background: '#fff', padding: 24, minHeight: 380 }}>
           <SearchComponent />
@@ -71,4 +77,20 @@ const Home = () => {
   )
 }
 
-export default Home
+const mapStateToProps = state => ({
+  pingState: state.ping,
+})
+
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators(
+    {
+      ping,
+    },
+    dispatch
+  )
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home)
