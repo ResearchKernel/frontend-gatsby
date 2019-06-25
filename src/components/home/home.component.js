@@ -1,12 +1,12 @@
 import { Card, Input, Layout, Row } from 'antd'
 import React from 'react'
-import CardWrapper from '../card/card.component'
 import SearchComponent from '../searchbar/search.component'
 import { connect } from 'react-redux'
 import { ping } from '../../redux/actions/actions'
 import { bindActionCreators } from 'redux'
 import './home.style.css'
-import SearchWrapper from './searchWrapper.component'
+import image from '../../static/download.png'
+import CategoryWrapper from './categoryWrapper.container'
 
 const { Content, Footer } = Layout
 const gridStyle = {
@@ -19,7 +19,13 @@ const Home = props => {
   return (
     <div>
       <Content style={{ padding: '0 50px', marginTop: 64 }}>
-        <SearchWrapper />
+        <div className="container">
+          <img src={image} alt="Cinque Terre" />
+          <div className="center">
+            <SearchComponent />
+            <CategoryWrapper />
+          </div>
+        </div>
       </Content>
 
       <Footer style={{ textAlign: 'center' }}>
