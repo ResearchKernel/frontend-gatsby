@@ -24,7 +24,11 @@ const CategoryWrapper = props => {
                     overflow: 'scroll',
                   }}
                 >
-                  <Link to={`/${categoryKey}`}>
+                  <Link
+                    key={categoryKey}
+                    to={`/category?key=${categoryKey}`}
+                    state={{ categoryKey: categoryKey }}
+                  >
                     <Meta title={categoryValue.name} />
                   </Link>
                 </Card>
