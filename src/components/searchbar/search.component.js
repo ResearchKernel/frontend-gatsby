@@ -3,8 +3,6 @@ import React from 'react'
 
 const { Option, OptGroup } = AutoComplete
 
-const Search = Input.Search
-
 const dataSource = [
   {
     title: 'Libraries',
@@ -82,7 +80,7 @@ const options = dataSource
     </Option>,
   ])
 
-function search() {
+const Search = () => {
   return (
     <div className="certain-category-search-wrapper" style={{ width: 'auto' }}>
       <AutoComplete
@@ -91,7 +89,7 @@ function search() {
         dropdownMatchSelectWidth={true}
         dropdownStyle={{ width: 300 }}
         size="large"
-        style={{ width: '100%' }}
+        style={{ width: '500px' }}
         dataSource={options}
         placeholder="eg: Machine Learning"
         optionLabelProp="value"
@@ -104,4 +102,4 @@ function search() {
   )
 }
 
-export default search
+export default Search
