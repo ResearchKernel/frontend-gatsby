@@ -10,7 +10,7 @@ const CategoryWrapper = props => {
   return (
     <CategoryCarousal>
       {category.map(categoryKey => {
-        let categoryValue = categoryList[categoryKey]
+        const categoryValue = categoryList[categoryKey]
         return (
           <Link
             key={categoryKey}
