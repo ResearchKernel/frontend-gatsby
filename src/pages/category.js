@@ -1,7 +1,8 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Row, Col, Input, Collapse, Icon, Checkbox, Card } from 'antd'
+import { Row, Col, Input, Collapse, Icon, Checkbox, Card, Radio } from 'antd'
 import icon from '../images/icon.png'
+import categoryList from '../list.json'
 
 const { Search } = Input
 const { Panel } = Collapse
@@ -13,17 +14,24 @@ const customPanelStyle = {
   marginBottom: 24,
   marginRight: 24,
   border: 0,
-  overflow: 'hidden',
+  overflow: 'scroll',
 }
 
 const Category = props => {
-  console.log(props.location.state.categoryKey)
+  const categoryKey = props.location.state.categoryKey
+  const category = Object.entries(categoryList)
+  const selectedCategory = category.filter(
+    subCategory => subCategory[0] === categoryKey
+  )
+  const researchAreas = Object.entries(selectedCategory[0][1].sub)
   return (
     <Layout>
       <div style={{ padding: '70px' }}>
         <div>
           <Row gutter={16}>
-            <Col span={12}>Publication database</Col>
+            <Col span={12}>
+              Publication Papers: {selectedCategory[0][1].name}
+            </Col>
             <Col span={12}>
               <Search
                 placeholder="input search text"
@@ -58,19 +66,18 @@ const Category = props => {
                   <Checkbox>2016</Checkbox>
                 </Panel>
                 <Panel header="Research Areas" key="2" style={customPanelStyle}>
-                  <Checkbox> Algorithms and Theory</Checkbox>
-                  <Checkbox>Data Management</Checkbox>
-                  <Checkbox>Data Mining and Modeling</Checkbox>
-                  <Checkbox>
-                    Distributed Systems and Parallel Computing
-                  </Checkbox>
-                  <Checkbox>Economics and Electronic Commerce</Checkbox>
-                  <Checkbox>Education Innovation</Checkbox>
-                  <Checkbox>General Science</Checkbox>
-                  <Checkbox>Hardware and Architecture</Checkbox>
-                  <Checkbox>
-                    Human-Computer Interaction and Visualization
-                  </Checkbox>
+                  <div style={{ overflow: 'scroll' }}>
+                    <Radio.Group
+                      onChange={e => console.log(e.target.value)}
+                      // value={this.state.value}
+                    >
+                      {researchAreas.map(item => (
+                        <div>
+                          <Radio value={item[0]}>{item[1].category}</Radio>
+                        </div>
+                      ))}
+                    </Radio.Group>
+                  </div>
                 </Panel>
                 <Panel header="Teams" key="3" style={customPanelStyle}>
                   <Checkbox>AI Fundamentals & Applications</Checkbox>
