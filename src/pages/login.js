@@ -1,17 +1,36 @@
 import { Form, Icon, Input, Button, Checkbox } from 'antd'
 import React, { Component } from 'react'
-import { Row, Layout } from 'antd'
+import { Layout } from 'antd'
 import Header from '../components/header/header'
+import axios from 'axios'
 
 const { Content, Footer } = Layout
 
 export class login extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      username: '',
+      password: '',
+    }
+  }
+
   handleSubmit = e => {
     e.preventDefault()
+    var apiBaseUrl = 'http://3.215.107.53:3000/api/v1/auth/'
+    var self = e
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values)
+        console.log('values', values)
       }
+      var payload = {
+        username: values.username,
+        password: values.password,
+      }
+      axios
+        .post(apiBaseUrl + '/login', payload)
+        .then()
+        .catch({})
     })
   }
   render() {
@@ -32,6 +51,9 @@ export class login extends Component {
                     <Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />
                   }
                   placeholder="Username"
+                  onChange={(event, newValue) =>
+                    this.setState({ username: newValue })
+                  }
                 />
               )}
             </Form.Item>
@@ -47,6 +69,9 @@ export class login extends Component {
                   }
                   type="password"
                   placeholder="Password"
+                  onChange={(event, newValue) =>
+                    this.setState({ password: newValue })
+                  }
                 />
               )}
             </Form.Item>
@@ -65,7 +90,7 @@ export class login extends Component {
               >
                 Log in
               </Button>
-              Or <a href="">register now!</a>
+              Or <a href="/signup">register now!</a>
             </Form.Item>
           </Form>
         </Content>
