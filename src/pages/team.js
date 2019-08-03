@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/header/header'
-import { Card, Row, Col } from 'antd'
+import { Card, Row, Col, Button } from 'antd'
 import CardWrapper from '../components/card/card.component'
 import teamData from '../static/teamData'
 
@@ -12,13 +12,21 @@ function Team() {
       <Header />
       <div
         style={{
+          background: '#6a8da6',
+          textAlign: 'center',
+        }}
+      >
+        <h1>Developers Behind the project.</h1>
+      </div>
+      <div
+        style={{
           background: '#ECECEC',
           paddingBottom: 5,
           paddingTop: 20,
           paddingLeft: 150,
         }}
       >
-        <h1>Project Collaborators</h1>
+        <h3>Project Collaborators</h3>
       </div>
 
       <div

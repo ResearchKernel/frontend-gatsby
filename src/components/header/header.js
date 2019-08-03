@@ -1,8 +1,6 @@
-import { Button, Form, Input, Layout, Menu, Modal, Radio } from 'antd'
+import { Layout, Menu } from 'antd'
 import { Link } from 'gatsby'
 import React from 'react'
-
-const { Header, Content, Footer } = Layout
 
 class header extends React.Component {
   render() {
@@ -12,7 +10,7 @@ class header extends React.Component {
         <div className="logo" />
         <Menu theme="dark" mode="horizontal" style={{ lineHeight: '64px' }}>
           <Menu.Item key="Home">
-            <Link to="/">Home</Link>
+            <Link to="/">Researchkernel</Link>
           </Menu.Item>
           <Menu.Item key="About Us">
             <Link to="/about">About Us</Link>

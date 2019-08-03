@@ -13,6 +13,18 @@ function community() {
   return (
     <Fragment>
       <Header />
+      <div
+        style={{
+          background: '#6a8da6',
+          textAlign: 'center',
+          height: '200',
+        }}
+      >
+        <h1>
+          Community is a great place to share your findings, discuss on a
+          researchpaper and connect with like minded peoples across the globe
+        </h1>
+      </div>
       <Content style={{ padding: '0 50px', marginTop: 60 }}>
         <h1>Physics</h1>
         <Row gutter={8}>

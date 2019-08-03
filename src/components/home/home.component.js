@@ -6,6 +6,7 @@ import { ping } from '../../redux/actions/actions'
 import { bindActionCreators } from 'redux'
 import './home.style.css'
 import image from '../../static/download.png'
+import wallpaper from '../../static/rk.png'
 import CategoryWrapper from './categoryWrapper.container'
 
 const { Content, Footer } = Layout
@@ -18,9 +19,9 @@ const Search = Input.Search
 const Home = props => {
   return (
     <div>
-      <Content style={{ padding: '0 50px', marginTop: 64 }}>
+      <Content>
         <div className="container">
-          <img src={image} alt="Cinque Terre" />
+          <img src={wallpaper} alt="Cinque Terre" />
           <div className="center">
             <SearchComponent />
             <CategoryWrapper />
