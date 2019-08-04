@@ -12,7 +12,7 @@ const CardWrapper = ({
 }) => (
   <Card
     bordered={false}
-    style={{ width: 300, height: 500, overflow: 'scroll' }}
+    style={{ width: 400, height: 700, overflow: 'scroll' }}
     size="large"
     cover={<img alt={altImage} src={source} />}
     actions={[

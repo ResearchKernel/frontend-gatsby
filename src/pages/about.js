@@ -2,7 +2,6 @@ import { Card, Col, Layout, Row, Table } from 'antd'
 import React, { Fragment } from 'react'
 import Header from '../components/header/header'
 
-
 const { Content, Footer } = Layout
 const columns = [
   {
@@ -50,9 +49,9 @@ function about() {
           display: 'flex',
         }}
       >
-        <h1 style={{ textAlign: 'center', display: 'flex', fontSize: '15' }}>
-          Our Vision is to provide everything at one place, potentially save
-          time of Researchers.
+        <h1 style={{ textAlign: 'center', display: 'flex', fontSize: '13' }}>
+          An Open Source Project, with the vision of providing everything at one
+          place to Researchers.
         </h1>
       </div>
       {/* ResearchKernel's Contextual Search and Open Community Forum */}
@@ -84,7 +83,7 @@ function about() {
           <Col span={4}>
             <Card
               hoverable
-              style={{ width: 240 }}
+              style={{ height: 240, width: 240 }}
               cover={
                 <img
                   alt="example"
@@ -96,7 +95,7 @@ function about() {
           <Col span={4}>
             <Card
               hoverable
-              style={{ width: 240 }}
+              style={{ height: 240, width: 240 }}
               cover={
                 <img
                   alt="example"
@@ -108,7 +107,7 @@ function about() {
           <Col span={4}>
             <Card
               hoverable
-              style={{ width: 240 }}
+              style={{ height: 240, width: 240 }}
               cover={
                 <img
                   alt="example"
@@ -120,7 +119,7 @@ function about() {
           <Col span={4}>
             <Card
               hoverable
-              style={{ width: 240 }}
+              style={{ height: 240, width: 240 }}
               cover={
                 <img
                   alt="example"
@@ -132,7 +131,7 @@ function about() {
           <Col span={4}>
             <Card
               hoverable
-              style={{ width: 240 }}
+              style={{ height: 240, width: 240 }}
               cover={
                 <img
                   alt="example"
@@ -144,7 +143,7 @@ function about() {
           <Col span={4}>
             <Card
               hoverable
-              style={{ width: 240 }}
+              style={{ height: 240, width: 240 }}
               cover={
                 <img
                   alt="example"
@@ -183,7 +182,7 @@ function about() {
             <Col span={4}>
               <Card
                 hoverable
-                style={{ width: 240 }}
+                style={{ height: 240, width: 240 }}
                 cover={
                   <img
                     alt="example"
@@ -195,7 +194,7 @@ function about() {
             <Col span={4}>
               <Card
                 hoverable
-                style={{ width: 240 }}
+                style={{ height: 240, width: 240 }}
                 cover={
                   <img
                     alt="example"
@@ -207,7 +206,7 @@ function about() {
             <Col span={4}>
               <Card
                 hoverable
-                style={{ width: 240 }}
+                style={{ height: 240, width: 240 }}
                 cover={
                   <img
                     alt="example"
@@ -219,7 +218,7 @@ function about() {
             <Col span={4}>
               <Card
                 hoverable
-                style={{ width: 240 }}
+                style={{ height: 240, width: 240 }}
                 cover={
                   <img
                     alt="example"
@@ -231,7 +230,7 @@ function about() {
             <Col span={4}>
               <Card
                 hoverable
-                style={{ width: 240 }}
+                style={{ height: 240, width: 240 }}
                 cover={
                   <img
                     alt="example"
@@ -243,7 +242,7 @@ function about() {
             <Col span={4}>
               <Card
                 hoverable
-                style={{ width: 240 }}
+                style={{ height: 240, width: 240 }}
                 cover={
                   <img
                     alt="example"
@@ -256,7 +255,7 @@ function about() {
         </Content>
       </Content>
       {/* Current Domains we are working on. */}
-      <Content>
+      <Content style={{ padding: '0 50px', marginTop: 64 }}>
         <Row gutter={16}>
           <div
             style={{ background: '#ECECEC', fontSize: 20, textAlign: 'center' }}

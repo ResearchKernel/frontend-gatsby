@@ -18,37 +18,34 @@ function blog() {
         }}
       >
         <h1 style={{ textAlign: 'center', display: 'flex', fontSize: '15' }}>
-          Our Vision is to provide everything at one place, potentially save
-          time of Researchers.
+          Research and Technical Blogs @ Researchkernel
         </h1>
       </div>
       <Content style={{ padding: '0 50px', marginTop: 60 }}>
-        <h1 textAlign="center">Research Kernel Blogs</h1>
-        <br />
         <h3> Data Science and Machine Learning </h3>
         <Row gutter={8}>
           <Col span={6}>
-          <div onClick={() => alert("Hello from here")}>
-            <Card
-              hoverable
-              style={{ width: 'auto' }}
-              cover={
-                <img
-                  alt="example"
-                  src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Ffpd.gsfc.nasa.gov%2Fimages%2Fastrophysics.jpg&f=1"
+            <div onClick={() => alert('Hello from here')}>
+              <Card
+                hoverable
+                style={{ width: 'auto' }}
+                cover={
+                  <img
+                    alt="example"
+                    src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Ffpd.gsfc.nasa.gov%2Fimages%2Fastrophysics.jpg&f=1"
+                  />
+                }
+                actions={[
+                  <Icon type="setting" />,
+                  <Icon type="edit" />,
+                  <Icon type="ellipsis" />,
+                ]}
+              >
+                <Meta
+                  title="Recommendation Systems Part 1"
+                  description="We have to get data from community.researchkernel.org"
                 />
-              }
-              actions={[
-                <Icon type="setting" />,
-                <Icon type="edit" />,
-                <Icon type="ellipsis" />,
-              ]}
-            >
-              <Meta
-                title="Recommendation Systems Part 1"
-                description="We have to get data from community.researchkernel.org"
-              />
-            </Card>
+              </Card>
             </div>
           </Col>
           <Col span={6}>
