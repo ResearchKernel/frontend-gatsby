@@ -1,16 +1,13 @@
 import React from 'react'
-import { Card, Icon } from 'antd'
-const { Meta } = Card
-
-const DivWrapper = ({ altImage, content, color }) => (
+import { Card,  } from 'antd'
+const DivWrapper = ({ altImage, content, color, fontSize, font }) => (
   <div
     style={{
       background: color,
       textAlign: 'center',
+      fontSize: fontSize,
     }}
-  >
-    content
-  </div>
+  />
 )
 
 export default DivWrapper

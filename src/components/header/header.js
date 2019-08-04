@@ -1,4 +1,4 @@
-import { Layout, Menu } from 'antd'
+import { Menu } from 'antd'
 import { Link } from 'gatsby'
 import React from 'react'
 

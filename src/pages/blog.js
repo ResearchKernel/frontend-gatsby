@@ -1,24 +1,34 @@
-import { Card, Col, Icon, Layout, Row, Divider } from 'antd'
+import { Card, Col, Icon, Layout, Row } from 'antd'
 import React, { Fragment } from 'react'
 import Header from '../components/header/header'
 
 const { Meta } = Card
 const { Content, Footer } = Layout
-const gridStyle = {
-  width: '30%',
-  hoverable: true,
-}
 
 function blog() {
   return (
     <Fragment>
       <Header />
+      <div
+        style={{
+          background: '#6a8da6',
+          textAlign: 'center',
+          height: 250,
+          display: 'flex',
+        }}
+      >
+        <h1 style={{ textAlign: 'center', display: 'flex', fontSize: '15' }}>
+          Our Vision is to provide everything at one place, potentially save
+          time of Researchers.
+        </h1>
+      </div>
       <Content style={{ padding: '0 50px', marginTop: 60 }}>
         <h1 textAlign="center">Research Kernel Blogs</h1>
         <br />
         <h3> Data Science and Machine Learning </h3>
         <Row gutter={8}>
           <Col span={6}>
+          <div onClick={() => alert("Hello from here")}>
             <Card
               hoverable
               style={{ width: 'auto' }}
@@ -39,6 +49,7 @@ function blog() {
                 description="We have to get data from community.researchkernel.org"
               />
             </Card>
+            </div>
           </Col>
           <Col span={6}>
             <Card

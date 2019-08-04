@@ -1,7 +1,7 @@
 import { Card, Col, Layout, Row, Table } from 'antd'
 import React, { Fragment } from 'react'
 import Header from '../components/header/header'
-const { Meta } = Card
+
 
 const { Content, Footer } = Layout
 const columns = [
