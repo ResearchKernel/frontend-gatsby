@@ -1,158 +1,286 @@
+import { Card, Col, Layout, Row, Table } from 'antd'
 import React, { Fragment } from 'react'
 import Header from '../components/header/header'
-import { Row, Layout } from 'antd'
 
 const { Content, Footer } = Layout
+const columns = [
+  {
+    title: 'Domain Category',
+    dataIndex: 'name',
+  },
+  {
+    title: 'Codes',
+    dataIndex: 'age',
+  },
+  {
+    title: 'Domain Sub-Category',
+    dataIndex: 'address',
+  },
+]
+const data = [
+  {
+    name: 'John Brown',
+    age: 32,
+    address: 'New York No. 1 Lake Park',
+  },
+  {
+    key: '2',
+    name: 'Jim Green',
+    age: 42,
+    address: 'London No. 1 Lake Park',
+  },
+  {
+    key: '3',
+    name: 'Joe Black',
+    age: 32,
+    address: 'Sidney No. 1 Lake Park',
+  },
+]
 
 function about() {
   return (
     <Fragment>
-      <div>
-        <Header />
-        <div
-          style={{
-            background: '#ECECEC',
-            paddingBottom: 5,
-            paddingTop: 20,
-            paddingLeft: 150,
-          }}
-        >
-          <h1>About Us</h1>
-        </div>
-        <Content style={{ padding: '0 50px', marginTop: 64 }}>
-          <Row gutter={16}>
+      <Header />
+      <div
+        style={{
+          background: '#6a8da6',
+          textAlign: 'center',
+          height: 250,
+          display: 'flex',
+        }}
+      >
+        <h1 style={{ textAlign: 'center', display: 'flex', fontSize: '13' }}>
+          An Open Source Project, with the vision of providing everything at one
+          place to Researchers.
+        </h1>
+      </div>
+      {/* ResearchKernel's Contextual Search and Open Community Forum */}
+      <Content style={{ padding: '0 50px', marginTop: 64 }}>
+        <Row gutter={16}>
+          <div
+            style={{ background: '#ECECEC', fontSize: 20, textAlign: 'center' }}
+          >
+            <h3>ResearchKernel's Contextual Search and Open Community Forum</h3>
+          </div>
+
+          <Col span={12} offset={6}>
             <p>
-              Transforming research with innovation. Our objective at
-              ResearchKernel is to not only provide a platform for you to
-              perform Research but also make it interactive. With Personalised
-              Recommendations, we make the tedious task of searching easier.
-              It's a community-driven interface ensuring that you find the
-              features Available but not limited to: Personalised
-              Recommendation: To show you only what's relevant to you and save
-              time from going through unnecessary Search Results. Community
-              Forum: For you to find like-minded people and find collaborators
-              for your projects. Similar Papers: Can't find what you're looking
-              for? This feature will help you find relevant papers for your
-              research. Being developers, we understand your love for Open
-              Source. Here's the list of things you have access to: Open curated
-              Database Pluggable APIs Open Source Research Paper categories The
-              web-interface is not limited to a single category. Papers
-              available on https://arxiv.org/ are included in the vast library
-              to be able to search across all categories and sub-categories. For
-              more information, refer below:
+              Our objective at ResearchKernel is to not only provide a platform
+              for you to do a search but also make it interactive and relevant.
+              With Contextual Search, we make the tedious task of searching
+              easier only show what's relevant to you that save your time from
+              going through unnecessary Search Results. We also provide
+              Community Forum to find like-minded people that might become your
+              collaborators for your project.
+            </p>
+          </Col>
+          <br />
+        </Row>
+      </Content>
+      {/* Lis of cards */}
+      <Content>
+        <Row gutter={8}>
+          <Col span={4}>
+            <Card
+              hoverable
+              style={{ height: 240, width: 240 }}
+              cover={
+                <img
+                  alt="example"
+                  src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FoG9JWEcm7dlTi%2Fgiphy.gif&f=1"
+                />
+              }
+            />
+          </Col>
+          <Col span={4}>
+            <Card
+              hoverable
+              style={{ height: 240, width: 240 }}
+              cover={
+                <img
+                  alt="example"
+                  src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F68%2F6b%2F26%2F686b2629c7037e38cbc5aa8f74d31401.gif&f=1"
+                />
+              }
+            />
+          </Col>
+          <Col span={4}>
+            <Card
+              hoverable
+              style={{ height: 240, width: 240 }}
+              cover={
+                <img
+                  alt="example"
+                  src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F21%2F7d%2Fa2%2F217da299cc918fad9b76eb99e4bb75b3.gif&f=1"
+                />
+              }
+            />
+          </Col>
+          <Col span={4}>
+            <Card
+              hoverable
+              style={{ height: 240, width: 240 }}
+              cover={
+                <img
+                  alt="example"
+                  src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FoG9JWEcm7dlTi%2Fgiphy.gif&f=1"
+                />
+              }
+            />
+          </Col>
+          <Col span={4}>
+            <Card
+              hoverable
+              style={{ height: 240, width: 240 }}
+              cover={
+                <img
+                  alt="example"
+                  src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F21%2F7d%2Fa2%2F217da299cc918fad9b76eb99e4bb75b3.gif&f=1"
+                />
+              }
+            />
+          </Col>
+          <Col span={4}>
+            <Card
+              hoverable
+              style={{ height: 240, width: 240 }}
+              cover={
+                <img
+                  alt="example"
+                  src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F68%2F6b%2F26%2F686b2629c7037e38cbc5aa8f74d31401.gif&f=1"
+                />
+              }
+            />
+          </Col>
+        </Row>
+      </Content>
+      {/* Personalized  */}
+      <Content>
+        <Row gutter={16}>
+          <div
+            style={{ background: '#ECECEC', fontSize: 20, textAlign: 'center' }}
+          >
+            <h3> Personalised Recomendations, Daily Updates from Arxiv.org</h3>
+          </div>
+          <Col span={12} offset={6}>
+            <p>
+              Staying Updated is very important, however not everything which is
+              published will be usefull. Our Platfrom will also give you
+              relevant updates that helps you in your research domain. We use
+              Machine Learning and Deep Learning for finding what information
+              will be relevant for you based on you interaction with
+              ResearchKernel.
+            </p>
+            <br />
+          </Col>
+        </Row>
+      </Content>
+      {/* Lis of cards */}
+      <Content>
+        <Content>
+          <Row gutter={8}>
+            <Col span={4}>
+              <Card
+                hoverable
+                style={{ height: 240, width: 240 }}
+                cover={
+                  <img
+                    alt="example"
+                    src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FoG9JWEcm7dlTi%2Fgiphy.gif&f=1"
+                  />
+                }
+              />
+            </Col>
+            <Col span={4}>
+              <Card
+                hoverable
+                style={{ height: 240, width: 240 }}
+                cover={
+                  <img
+                    alt="example"
+                    src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F68%2F6b%2F26%2F686b2629c7037e38cbc5aa8f74d31401.gif&f=1"
+                  />
+                }
+              />
+            </Col>
+            <Col span={4}>
+              <Card
+                hoverable
+                style={{ height: 240, width: 240 }}
+                cover={
+                  <img
+                    alt="example"
+                    src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F21%2F7d%2Fa2%2F217da299cc918fad9b76eb99e4bb75b3.gif&f=1"
+                  />
+                }
+              />
+            </Col>
+            <Col span={4}>
+              <Card
+                hoverable
+                style={{ height: 240, width: 240 }}
+                cover={
+                  <img
+                    alt="example"
+                    src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FoG9JWEcm7dlTi%2Fgiphy.gif&f=1"
+                  />
+                }
+              />
+            </Col>
+            <Col span={4}>
+              <Card
+                hoverable
+                style={{ height: 240, width: 240 }}
+                cover={
+                  <img
+                    alt="example"
+                    src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F21%2F7d%2Fa2%2F217da299cc918fad9b76eb99e4bb75b3.gif&f=1"
+                  />
+                }
+              />
+            </Col>
+            <Col span={4}>
+              <Card
+                hoverable
+                style={{ height: 240, width: 240 }}
+                cover={
+                  <img
+                    alt="example"
+                    src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F68%2F6b%2F26%2F686b2629c7037e38cbc5aa8f74d31401.gif&f=1"
+                  />
+                }
+              />
+            </Col>
+          </Row>
+        </Content>
+      </Content>
+      {/* Current Domains we are working on. */}
+      <Content style={{ padding: '0 50px', marginTop: 64 }}>
+        <Row gutter={16}>
+          <div
+            style={{ background: '#ECECEC', fontSize: 20, textAlign: 'center' }}
+          >
+            <h3> Domains we have at ResearchKernel </h3>
+          </div>
+          <Col span={12} offset={6}>
+            <p>
+              As an open source project, we are focusing on only publicily
+              available search papers. We have started from Arxiv.org that is
+              one of the largest free research paper proverder out there. We are
+              harvesting all the research paper arxiv has in there database from
+              1999 till date, however we are not limited to arxiv databse, we
+              will also incoporate other domains databses too in future.
             </p>
             <br />
             <p>
-              Arxiv code Category Names astro-ph Astrophysics astro-ph.CO
-              Cosmology and Nongalactic Astrophysics astro-ph.EP Earth and
-              Planetary Astrophysics astro-ph.GA Astrophysics of Galaxies
-              astro-ph.HE High Energy Astrophysical Phenomena astro-ph.IM
-              Instrumentation and Methods for Astrophysics astro-ph.SR Solar and
-              Stellar Astrophysics cond-mat.dis-nn Disordered Systems and Neural
-              Networks cond-mat.mes-hall Mesoscale and Nanoscale Physics
-              cond-mat.mtrl-sci Materials Science cond-mat.other Other Condensed
-              Matter cond-mat.quant-gas Quantum Gases cond-mat.soft Soft
-              Condensed Matter cond-mat.stat-mech Statistical Mechanics
-              cond-mat.str-el Strongly Correlated Electrons cond-mat.supr-con
-              Superconductivity cs.AI Artificial Intelligence cs.AR Hardware
-              Architecture cs.CC Computational Complexity cs.CE Computational
-              Engineering, Finance, and Science cs.CG Computational Geometry
-              cs.CL Computation and Language cs.CR Cryptography and Security
-              cs.CV Computer Vision and Pattern Recognition cs.CY Computers and
-              Society cs.DB Databases cs.DC Distributed, Parallel, and Cluster
-              Computing cs.DL Digital Libraries cs.DM Discrete Mathematics cs.DS
-              Data Structures and Algorithms cs.ET Emerging Technologies cs.FL
-              Formal Languages and Automata Theory cs.GL General Literature
-              cs.GR Graphics cs.GT Computer Science and Game Theory cs.HC
-              Human-Computer Interaction cs.IR Information Retrieval cs.IT
-              Information Theory cs.LG Machine Learning cs.LO Logic in Computer
-              Science cs.MA Multiagent Systems cs.MM Multimedia cs.MS
-              Mathematical Software cs.NA Numerical Analysis cs.NE Neural and
-              Evolutionary Computing cs.NI Networking and Internet Architecture
-              cs.OH Other Computer Science cs.OS Operating Systems cs.PF
-              Performance cs.PL Programming Languages cs.RO Robotics cs.SC
-              Symbolic Computation cs.SD Sound cs.SE Software Engineering cs.SI
-              Social and Information Networks cs.SY Systems and Control econ.EM
-              Econometrics eess.AS Audio and Speech Processing eess.IV Image and
-              Video Processing eess.SP Signal Processing gr-qc General
-              Relativity and Quantum Cosmology hep-ex High Energy Physics -
-              Experiment hep-lat High Energy Physics - Lattice hep-ph High
-              Energy Physics - Phenomenology hep-th High Energy Physics - Theory
-              math.AC Commutative Algebra math.AG Algebraic Geometry math.AP
-              Analysis of PDEs math.AT Algebraic Topology math.CA Classical
-              Analysis and ODEs math.CO Combinatorics math.CT Category Theory
-              math.CV Complex Variables math.DG Differential Geometry math.DS
-              Dynamical Systems math.FA Functional Analysis math.GM General
-              Mathematics math.GN General Topology math.GR Group Theory math.GT
-              Geometric Topology math.HO History and Overview math.IT
-              Information Theory math.KT K-Theory and Homology math.LO Logic
-              math.MG Metric Geometry math.MP Mathematical Physics math.NA
-              Numerical Analysis math.NT Number Theory math.OA Operator Algebras
-              math.OC Optimization and Control math.PR Probability math.QA
-              Quantum Algebra math.RA Rings and Algebras math.RT Representation
-              Theory math.SG Symplectic Geometry math.SP Spectral Theory math.ST
-              Statistics Theory math-ph Mathematical Physics nlin.AO Adaptation
-              and Self-Organizing Systems nlin.CD Chaotic Dynamics nlin.CG
-              Cellular Automata and Lattice Gases nlin.PS Pattern Formation and
-              Solitons nlin.SI Exactly Solvable and Integrable Systems nucl-ex
-              Nuclear Experiment nucl-th Nuclear Theory physics.acc-ph
-              Accelerator Physics physics.ao-ph Atmospheric and Oceanic Physics
-              physics.app-ph Applied Physics physics.atm-clus Atomic and
-              Molecular Clusters physics.atom-ph Atomic Physics physics.bio-ph
-              Biological Physics physics.chem-ph Chemical Physics
-              physics.class-ph Classical Physics physics.comp-ph Computational
-              Physics physics.data-an Data Analysis, Statistics and Probability
-              physics.ed-ph Physics Education physics.flu-dyn Fluid Dynamics
-              physics.gen-ph General Physics physics.geo-ph Geophysics
-              physics.hist-ph History and Philosophy of Physics physics.ins-det
-              Instrumentation and Detectors physics.med-ph Medical Physics
-              physics.optics Optics physics.plasm-ph Plasma Physics
-              physics.pop-ph Popular Physics physics.soc-ph Physics and Society
-              physics.space-ph Space Physics q-bio.BM Biomolecules q-bio.CB Cell
-              Behavior q-bio.GN Genomics q-bio.MN Molecular Networks q-bio.NC
-              Neurons and Cognition q-bio.OT Other Quantitative Biology q-bio.PE
-              Populations and Evolution q-bio.QM Quantitative Methods q-bio.SC
-              Subcellular Processes q-bio.TO Tissues and Organs q-fin.CP
-              Computational Finance q-fin.EC Economics q-fin.GN General Finance
-              q-fin.MF Mathematical Finance q-fin.PM Portfolio Management
-              q-fin.PR Pricing of Securities q-fin.RM Risk Management q-fin.ST
-              Statistical Finance q-fin.TR Trading and Market Microstructure
-              quant-ph Quantum Physics stat.AP Applications stat.CO Computation
-              stat.ME Methodology stat.ML Machine Learning stat.OT Other
-              Statistics stat.TH Statistics Theory Project Sections and
-              Structure Sections Description Backend For BackEnd, we are
-              utilizing node.js and React.js for Frontend Development. For
-              Database we use ElasticSearch, MySQL and Neo4j Graph Database.
-              Frontend For Frontend, we are utilizing React.js for Frontend
-              Development. For Database we use ElasticSearch, MySQL/MongoDB and
-              Neo4j Graph Database. Data Science We use machine learning and
-              deep learning for building Personalised and content based
-              recommendation systems. We are not bound by any language or
-              Library in Data Science. We are using Python and multiple
-              Libraries(NLTK, Spacy, Gensim, Pytorch) to implement NLP for
-              Recommendation systems Tasks. For Distribiting ML systems, we use
-              SparkML and Tensorflow. Cloud We are using AWS Cloud Platform for
-              development, staging and Production workloads for this project.
-              Upcoming Features UI/UX Development (Structure similar to Reddit)
-              Content Based Paper Recommendation System Saving User’s bookmark
-              and giving personalised recommendations based on that. User can
-              Paper like(claps), dislike, share(Twitter/). Bigger Database for
-              enhanced research like arxiv.org. Creating Knowledge Base Graph
-              for Research Papers Using the power of AI/Machine Learning for
-              giving better recommendations results. Features available for Use
-              Night/Light mode Sorting of papers based Time of publish Instant
-              GitHub source code search based on research papers Paginated
-              response for paper listing. Text searching research papers
-              Discourse Community for Researchers Community Guidelines for
-              Contributors Project Documentation AWS Architecture Google
-              Analytics
+              <Table columns={columns} dataSource={data} size="middle" />
             </p>
-          </Row>
-        </Content>
-        <Footer>
-          <div>Hello</div>
-        </Footer>
-      </div>
+          </Col>
+        </Row>
+      </Content>
+      <Footer>
+        <h1>This is footer</h1>
+      </Footer>
     </Fragment>
   )
 }
