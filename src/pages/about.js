@@ -1,8 +1,9 @@
-import { Card, Col, Layout, Row, Table } from 'antd'
+import { Card, Col, Layout, Row, Table, Avatar } from 'antd'
 import React, { Fragment } from 'react'
 import Header from '../components/header/header'
 
 const { Content, Footer } = Layout
+const { Meta } = Card
 const columns = [
   {
     title: 'Domain Category',
@@ -279,7 +280,9 @@ function about() {
         </Row>
       </Content>
       <Footer>
-        <h1>This is footer</h1>
+        <div style={{ textAlign: 'center', height: 250, display: 'flex' }}>
+          <Col xl={10}>Helow</Col>
+        </div>
       </Footer>
     </Fragment>
   )

@@ -1,6 +1,6 @@
 import { Form, Icon, Input, Button, Checkbox, Tooltip } from 'antd'
 import React, { Component } from 'react'
-import { Row, Layout } from 'antd'
+import { Layout } from 'antd'
 import Header from '../components/header/header'
 
 const { Content, Footer } = Layout

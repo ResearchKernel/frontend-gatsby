@@ -1,4 +1,4 @@
-import { combineEpics, ofType } from 'redux-observable'
+import { combineEpics } from 'redux-observable'
 import { pingEpic } from './pingEpic'
 
 export const rootEpic = combineEpics(
