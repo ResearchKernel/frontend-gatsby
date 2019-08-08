@@ -44,7 +44,7 @@ function about() {
       <Header />
       <div
         style={{
-          background: '#6a8da6',
+          background: 'linear-gradient(to right, #1c92d2, #f2fcfe)',
           textAlign: 'center',
           height: 250,
           display: 'flex',
