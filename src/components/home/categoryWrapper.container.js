@@ -3,12 +3,14 @@ import './home.style.css'
 import { Link } from 'gatsby'
 import categoryList from '../../list.json'
 import { CategoryCarousal, CategoryCard } from './categoryWrapper.style'
+import { Carousel } from 'antd';
+
 const { Meta } = CategoryCard
 
 const CategoryWrapper = props => {
   const category = Object.keys(categoryList)
   return (
-    <CategoryCarousal>
+    <Carousel autoplay>
       {category.map(categoryKey => {
         const categoryValue = categoryList[categoryKey]
         return (
@@ -23,7 +25,7 @@ const CategoryWrapper = props => {
           </Link>
         )
       })}
-    </CategoryCarousal>
+    </Carousel>
   )
 }
 

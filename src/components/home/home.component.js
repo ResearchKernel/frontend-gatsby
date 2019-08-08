@@ -21,7 +21,7 @@ const Home = props => {
     <div>
       <Content>
         <div className="container">
-          <img src={wallpaper} alt="Cinque Terre" />
+          <img/>
           <div className="center">
             <SearchComponent />
             <CategoryWrapper />

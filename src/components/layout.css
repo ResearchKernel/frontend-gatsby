@@ -183,7 +183,6 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -198,9 +197,12 @@ html {
 }
 /* ## Change Body font styles here */
 body {
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: sans-serif;
-  font-weight: normal;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #21242c !important;
+  font: Lato, sans-serif !important;
+  letter-spacing: -0.1px !important;
+  line-height: 26px !important;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';

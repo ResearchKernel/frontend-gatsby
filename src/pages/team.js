@@ -27,7 +27,7 @@ function Team() {
           <div
             style={{ background: '#ECECEC', fontSize: 20, textAlign: 'center' }}
           >
-            <h3> Research and Development Team @ Researchkernel </h3>
+            <h1> Research and Development Team @ Researchkernel </h1>
           </div>
           <Col span={12} offset={6}>
             <p>

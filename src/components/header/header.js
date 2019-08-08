@@ -8,7 +8,7 @@ class header extends React.Component {
       <div>
         {/* <Header style={{ position: 'auto', zIndex: 1, width: '100%' }}> */}
         <div className="logo" />
-        <Menu theme="dark" mode="horizontal" style={{ lineHeight: '64px' }}>
+        <Menu theme="dark" mode="horizontal" style={{ lineHeight: '64px', font: "Lato, sans-serif !important" }}>
           <Menu.Item key="Home">
             <Link to="/">Researchkernel</Link>
           </Menu.Item>

@@ -82,7 +82,7 @@ const options = dataSource
 
 const Search = () => {
   return (
-    <div className="certain-category-search-wrapper" style={{ width: 'auto' }}>
+    <div className="certain-category-search-wrapper" style={{ width: 'auto'}}>
       <AutoComplete
         className="certain-category-search"
         dropdownClassName="certain-category-search-dropdown"

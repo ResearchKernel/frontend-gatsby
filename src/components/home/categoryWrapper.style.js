@@ -6,5 +6,7 @@ export const CategoryCarousal = styled.div`
   overflow: scroll;
 `
 export const CategoryCard = styled(Card)`
-  margin: 50px;
+  // padding: 12px;
+   margin: 50px;
+  width: 500px;
 `
