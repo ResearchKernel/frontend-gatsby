@@ -37,7 +37,7 @@ export class login extends Component {
     const { getFieldDecorator } = this.props.form
     return (
       <div>
-        <Header />
+        <Header text="Welcome back! We are so happy to see you again :P"/>
         <Content style={{ padding: '0 50px', marginTop: 64 }}>
           <Row type="flex" justify="center">
             <Form onSubmit={this.handleSubmit} className="login-form">

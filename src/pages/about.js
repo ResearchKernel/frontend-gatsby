@@ -38,22 +38,27 @@ const data = [
   },
 ]
 
+const text_style = {
+  webkitfontsmoothing: 'antialiased',
+  color: '#123693',
+  font: "100 20px/30px 'Deepmind Sans',Helvetica,Arial,sans-serif",
+  position: 'relative',
+  zindex: 2,
+  display: 'inline-block',
+  width: '100%',
+}
+
 function about() {
   return (
     <Fragment>
-      <Header text="We are Trying to do something that maked sense" />
+      <Header text="Our aim is to provide Free personalized and contextual recommendations and Research Communities." />
 
       {/* ResearchKernel's Contextual Search and Open Community Forum */}
       <Content style={{ padding: '0 50px', marginTop: 64 }}>
         <Row gutter={16}>
-          <div
-            style={{ background: '#ECECEC', fontSize: 20, textAlign: 'center' }}
-          >
-            <h3>ResearchKernel's Contextual Search and Open Community Forum</h3>
-          </div>
-
           <Col span={12} offset={6}>
-            <p>
+          <h1 >Our Mission</h1>
+            <p style={text_style}>
               Our objective at ResearchKernel is to not only provide a platform
               for you to do a search but also make it interactive and relevant.
               With Contextual Search, we make the tedious task of searching

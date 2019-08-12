@@ -3,20 +3,28 @@ import React from 'react'
 import Header from '../components/header/header'
 
 const { Content, Footer } = Layout
+const text_style = {
+  webkitfontsmoothing: 'antialiased',
+  color: '#123693',
+  font: "100 20px/30px 'Deepmind Sans',Helvetica,Arial,sans-serif",
+  position: 'relative',
+  zindex: 2,
+  display: 'inline-block',
 
+}
 function joinus() {
   return (
     <div>
-      <Header />
+      <Header text="Join ResearchKernel Open Source"/>
       <Content style={{ padding: '0 50px', marginTop: 64 }}>
         <Row gutter={16}>
           <div
             style={{ background: '#ECECEC', fontSize: 20, textAlign: 'center' }}
           >
-            <h3> Join Open Source Project </h3>
+            <h3> Be a Hero! Change the World </h3>
           </div>
           <Col span={12} offset={6}>
-            <p>
+            <p style={text_style}>
               As an organisation we have multipule Open source project that
               might look interesting to you. Below are the list of the projects
               that we have @ Researckernel, however we are not limited to these,

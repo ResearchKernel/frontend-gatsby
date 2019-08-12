@@ -5,20 +5,27 @@ import Header from '../components/header/header'
 
 const { Meta } = Card
 const { Content, Footer } = Layout
-
+const text_style = {
+  webkitfontsmoothing: 'antialiased',
+  color: '#123693',
+  font: "100 20px/30px 'Deepmind Sans',Helvetica,Arial,sans-serif",
+  position: 'relative',
+  zindex: 2,
+  display: 'inline-block',
+}
 function community() {
   return (
     <Fragment>
-      <Header />
-      <Content style={{ padding: '0 50px', marginTop: 64 }}>
+      <Header text="Research Communities at ResearchKernel" />
+      <Content style={{ padding: '0 50px', marginTop: 20 }}>
         <Row gutter={16}>
           <div
             style={{ background: '#ECECEC', fontSize: 20, textAlign: 'center' }}
           >
-            <h3> Open Research Communities at ResearchKernel </h3>
+            <h3> Why Communities ?</h3>
           </div>
           <Col span={12} offset={6}>
-            <p>
+            <p style={text_style}>
               As an open source project, we are focusing on only publicily
               available search papers. We have started from Arxiv.org that is
               one of the largest free research paper proverder out there. We are
@@ -29,7 +36,7 @@ function community() {
           </Col>
         </Row>
       </Content>
-      <Content style={{ padding: '0 50px', marginTop: 60 }}>
+      <Content style={{ padding: '0 50px', marginTop: 40 }}>
         {/* Physics Categories */}
         <Row gutter={16}>
           <Col span={8}>

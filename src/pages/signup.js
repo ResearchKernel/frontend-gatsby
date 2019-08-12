@@ -39,7 +39,7 @@ class Signup extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header text="Hey! Thanks for Registering. We assure you, you won't be recieving any mails from us."/>
         <Form onSubmit={this.handleSubmit}>
           <FormItem>
             <Row type="flex" justify="center">

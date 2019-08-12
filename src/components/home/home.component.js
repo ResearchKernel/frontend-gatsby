@@ -8,6 +8,7 @@ import './home.style.css'
 // import image from '../../static/download.png'
 import wallpaper from '../../static/rk.png'
 import CategoryWrapper from './categoryWrapper.container'
+import Header from '../header/header'
 
 const { Content, Footer } = Layout
 const gridStyle = {
@@ -19,6 +20,7 @@ const gridStyle = {
 const Home = props => {
   return (
     <div>
+      {/* <Header /> */}
       <Content>
         <div className="container">
           {/* <img src={wallpaper} alt="Cinque Terre" /> */}
