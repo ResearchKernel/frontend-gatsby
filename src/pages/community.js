@@ -10,18 +10,6 @@ function community() {
   return (
     <Fragment>
       <Header />
-      <div
-        style={{
-          background: '#6a8da6',
-          textAlign: 'center',
-          height: 250,
-          display: 'flex',
-        }}
-      >
-        <h1 style={{ textAlign: 'center', display: 'flex', fontSize: '15' }}>
-          Our Vision is to provide
-        </h1>
-      </div>
       <Content style={{ padding: '0 50px', marginTop: 64 }}>
         <Row gutter={16}>
           <div

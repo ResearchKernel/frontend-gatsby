@@ -4,7 +4,6 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Home from '../components/home/home.component'
 import '../base.css'
-import Header from '../components/header/header'
 import store from '../redux'
 
 const IndexPage = () => (

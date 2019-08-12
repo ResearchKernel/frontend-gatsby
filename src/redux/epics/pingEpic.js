@@ -1,6 +1,6 @@
 import * as actionTypes from '../actionTypes/actionsTypes'
 import { ajax } from 'rxjs/ajax'
-import { mergeMap, catchError, map, flatMap } from 'rxjs/operators'
+import { mergeMap, catchError, map } from 'rxjs/operators'
 import { of } from 'rxjs/observable/of'
 import { ofType } from 'redux-observable'
 import { pingSuccess, pingError } from '../actions/actions'

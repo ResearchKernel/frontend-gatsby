@@ -10,18 +10,6 @@ function Team() {
   return (
     <Fragment>
       <Header />
-      <div
-        style={{
-          background: '#6a8da6',
-          textAlign: 'center',
-          height: 250,
-          display: 'flex',
-        }}
-      >
-        <h1 style={{ textAlign: 'center', display: 'flex', fontSize: '15' }}>
-          Team
-        </h1>
-      </div>
       <Content style={{ padding: '0 50px', marginTop: 64 }}>
         <Row gutter={16}>
           <div
@@ -30,7 +18,15 @@ function Team() {
             <h3> Research and Development Team @ Researchkernel </h3>
           </div>
           <Col span={12} offset={6}>
-            <p>
+            <p
+              style={{
+                fontsize: 42,
+                color: '#123693',
+                fontsize: 26,
+                lineheight: 36,
+                textAlign: 'center',
+              }}
+            >
               At Researchkernel we have a small team working in big ideas and
               developemnt challenges in Cloud Deployment, System Archicture,
               Machine Learning, Data Science and DevOps Domains. If you are

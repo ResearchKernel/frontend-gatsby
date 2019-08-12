@@ -1,8 +1,9 @@
-import { Card, Col, Layout, Row, Table } from 'antd'
+import { Card, Col, Layout, Row, Table, Avatar } from 'antd'
 import React, { Fragment } from 'react'
 import Header from '../components/header/header'
 
 const { Content, Footer } = Layout
+const { Meta } = Card
 const columns = [
   {
     title: 'Domain Category',
@@ -40,20 +41,8 @@ const data = [
 function about() {
   return (
     <Fragment>
-      <Header />
-      <div
-        style={{
-          background: '#6a8da6',
-          textAlign: 'center',
-          height: 250,
-          display: 'flex',
-        }}
-      >
-        <h1 style={{ textAlign: 'center', display: 'flex', fontSize: '13' }}>
-          An Open Source Project, with the vision of providing everything at one
-          place to Researchers.
-        </h1>
-      </div>
+      <Header text="We are Trying to do something that maked sense" />
+
       {/* ResearchKernel's Contextual Search and Open Community Forum */}
       <Content style={{ padding: '0 50px', marginTop: 64 }}>
         <Row gutter={16}>
@@ -279,7 +268,9 @@ function about() {
         </Row>
       </Content>
       <Footer>
-        <h1>This is footer</h1>
+        <div style={{ textAlign: 'center', height: 250, display: 'flex' }}>
+          <Col xl={10}>Helow</Col>
+        </div>
       </Footer>
     </Fragment>
   )
