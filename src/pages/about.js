@@ -41,20 +41,8 @@ const data = [
 function about() {
   return (
     <Fragment>
-      <Header />
-      <div
-        style={{
-          background: 'linear-gradient(to right, #1c92d2, #f2fcfe)',
-          textAlign: 'center',
-          height: 250,
-          display: 'flex',
-        }}
-      >
-        <h1 style={{ textAlign: 'center', display: 'flex', fontSize: '13' }}>
-          An Open Source Project, with the vision of providing everything at one
-          place to Researchers.
-        </h1>
-      </div>
+      <Header text="We are Trying to do something that maked sense" />
+
       {/* ResearchKernel's Contextual Search and Open Community Forum */}
       <Content style={{ padding: '0 50px', marginTop: 64 }}>
         <Row gutter={16}>

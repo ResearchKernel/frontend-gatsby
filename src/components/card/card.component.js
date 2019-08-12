@@ -16,10 +16,10 @@ const CardWrapper = ({
     size="large"
     cover={<img alt={altImage} src={source} />}
     actions={[
-      <a href={linkedInUrl} target="_blank">
+      <a href={linkedInUrl} target="">
         <Icon type="linkedin" theme="filled" />
       </a>,
-      <a href={githubUrl} target="_blank">
+      <a href={githubUrl} target="">
         <Icon type="github" theme="filled" />
       </a>,
     ]}

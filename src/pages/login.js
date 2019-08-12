@@ -1,4 +1,4 @@
-import { Form, Icon, Input, Button, Checkbox } from 'antd'
+import { Row, Col, Form, Icon, Input, Button, Checkbox } from 'antd'
 import React, { Component } from 'react'
 import { Layout } from 'antd'
 import Header from '../components/header/header'
@@ -39,62 +39,69 @@ export class login extends Component {
       <div>
         <Header />
         <Content style={{ padding: '0 50px', marginTop: 64 }}>
-          <Form onSubmit={this.handleSubmit} className="login-form">
-            <Form.Item>
-              {getFieldDecorator('username', {
-                rules: [
-                  { required: true, message: 'Please input your username!' },
-                ],
-              })(
-                <Input
-                  prefix={
-                    <Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />
-                  }
-                  placeholder="Username"
-                  onChange={(event, newValue) =>
-                    this.setState({ username: newValue })
-                  }
-                />
-              )}
-            </Form.Item>
-            <Form.Item>
-              {getFieldDecorator('password', {
-                rules: [
-                  { required: true, message: 'Please input your Password!' },
-                ],
-              })(
-                <Input
-                  prefix={
-                    <Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />
-                  }
-                  type="password"
-                  placeholder="Password"
-                  onChange={(event, newValue) =>
-                    this.setState({ password: newValue })
-                  }
-                />
-              )}
-            </Form.Item>
-            <Form.Item>
-              {getFieldDecorator('remember', {
-                valuePropName: 'checked',
-                initialValue: true,
-              })(<Checkbox>Remember me</Checkbox>)}
-              <a className="login-form-forgot" href="">
-                Forgot password
-              </a>
-              <Button
-                type="primary"
-                htmlType="submit"
-                className="login-form-button"
-              >
-                Log in
-              </Button>
-              Or <a href="/signup">register now!</a>
-            </Form.Item>
-          </Form>
+          <Row type="flex" justify="center">
+            <Form onSubmit={this.handleSubmit} className="login-form">
+              <Form.Item>
+                {getFieldDecorator('username', {
+                  rules: [
+                    {
+                      required: true,
+                      message: 'Please input your username!',
+                    },
+                  ],
+                })(
+                  <Input
+                    prefix={
+                      <Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />
+                    }
+                    placeholder="Username"
+                    onChange={(event, newValue) =>
+                      this.setState({ username: newValue })
+                    }
+                  />
+                )}
+              </Form.Item>
+              <Form.Item>
+                {getFieldDecorator('password', {
+                  rules: [
+                    {
+                      required: true,
+                      message: 'Please input your Password!',
+                    },
+                  ],
+                })(
+                  <Input
+                    prefix={
+                      <Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />
+                    }
+                    type="password"
+                    placeholder="Password"
+                    onChange={(event, newValue) =>
+                      this.setState({ password: newValue })
+                    }
+                  />
+                )}
+              </Form.Item>
+              <Form.Item>
+                {getFieldDecorator('remember', {
+                  valuePropName: 'checked',
+                  initialValue: true,
+                })(<Checkbox>Remember me</Checkbox>)}
+                <a className="login-form-forgot" href="">
+                  Forgot password
+                </a>
+                <Button
+                  type="primary"
+                  htmlType="submit"
+                  className="login-form-button"
+                >
+                  Log in
+                </Button>
+                Or <a href="/signup">register now!</a>
+              </Form.Item>
+            </Form>
+          </Row>
         </Content>
-        <Footer>This is footer</Footer>
       </div>
     )
   }

@@ -8,19 +8,6 @@ function joinus() {
   return (
     <div>
       <Header />
-      <div
-        style={{
-          background: '#6a8da6',
-          textAlign: 'center',
-          height: 250,
-          display: 'flex',
-        }}
-      >
-        <h1 style={{ textAlign: 'center', display: 'flex', fontSize: '15' }}>
-          Join Us and be a part of something useful and innovative that
-          potentailly change the world.
-        </h1>
-      </div>
       <Content style={{ padding: '0 50px', marginTop: 64 }}>
         <Row gutter={16}>
           <div

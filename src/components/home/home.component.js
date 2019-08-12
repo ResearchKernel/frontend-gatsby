@@ -21,24 +21,13 @@ const Home = props => {
     <div>
       <Content>
         <div className="container">
-          <img src={wallpaper} alt="Cinque Terre" />
+          {/* <img src={wallpaper} alt="Cinque Terre" /> */}
           <div className="center">
             <SearchComponent />
             <CategoryWrapper />
           </div>
         </div>
       </Content>
-
-      <Footer style={{ textAlign: 'center' }}>
-        <Card title="Nonlinear Sciences">
-          <Card.Grid style={gridStyle}>Content</Card.Grid>
-          <Card.Grid style={gridStyle}>Content</Card.Grid>
-          <Card.Grid style={gridStyle}>Content</Card.Grid>
-          <Card.Grid style={gridStyle}>Content</Card.Grid>
-          <Card.Grid style={gridStyle}>Content</Card.Grid>
-          <Card.Grid style={gridStyle}>Content</Card.Grid>
-        </Card>
-      </Footer>
     </div>
   )
 }

@@ -1,13 +1,15 @@
 import React from 'react'
 import { Layout } from 'antd'
+import Header from '../components/header/header'
 
 const { Content, Footer } = Layout
 
 function conatact() {
   return (
     <div>
+      <Header />>
       <Content>
-        <div>About Us</div>
+        <div>Contact USs</div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima soluta
           magni illo distinctio earum facilis iure excepturi aliquam quasi

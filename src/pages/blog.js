@@ -9,18 +9,11 @@ function blog() {
   return (
     <Fragment>
       <Header />
-      <div
-        style={{
-          background: '#6a8da6',
-          textAlign: 'center',
-          height: 250,
-          display: 'flex',
-        }}
-      >
-        <h1 style={{ textAlign: 'center', display: 'flex', fontSize: '15' }}>
-          Research and Technical Blogs @ Researchkernel
-        </h1>
-      </div>
+
+      <h1 style={{ textAlign: 'center', display: 'flex', fontSize: '15' }}>
+        Research and Technical Blogs @ Researchkernel
+      </h1>
+
       <Content style={{ padding: '0 50px', marginTop: 60 }}>
         <h3> Data Science and Machine Learning </h3>
         <Row gutter={8}>
