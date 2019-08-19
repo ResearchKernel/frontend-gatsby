@@ -25,7 +25,7 @@ const Category = props => {
   )
   const researchAreas = Object.entries(selectedCategory[0][1].sub)
   return (
-    <Layout>
+    <Layout isSearch={true}>
       <div style={{ padding: '70px' }}>
         <div>
           <Row gutter={16}>

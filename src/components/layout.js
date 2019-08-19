@@ -7,7 +7,7 @@ import './layout.css'
 // import 'hamburgers/dist/hamburgers.css'
 import './../base.scss'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, isSearch }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -20,7 +20,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title} isSearch={isSearch} />
         {children}
       </>
     )}

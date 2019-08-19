@@ -8,7 +8,7 @@ import store from '../redux'
 
 const IndexPage = () => (
   <Provider store={store}>
-    <Layout>
+    <Layout isSearch={true}>
       <SEO
         title="ResearchKernel"
         keywords={[
