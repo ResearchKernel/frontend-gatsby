@@ -10,6 +10,9 @@ export const HeaderMenu = styled(Menu)`
   position: fixed;
   z-index: 1;
   width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
   // background: linear-gradient(to left, #009fff, #ec2f4b);
 `
 

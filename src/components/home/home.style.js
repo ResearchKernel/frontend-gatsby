@@ -10,4 +10,5 @@ export const HomeContent = styled(Content)`
   text-align: center;
   font-size: 18px;
   padding: 70px;
+  margin-top: 80px;
 `
