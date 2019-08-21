@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/layout'
+import LayoutComponent from '../components/layout'
 import { Row, Col, Input, Collapse, Icon, Checkbox, Card, Radio } from 'antd'
 import icon from '../images/icon.png'
 import categoryList from '../list.json'
@@ -25,7 +25,7 @@ const Category = props => {
   )
   const researchAreas = Object.entries(selectedCategory[0][1].sub)
   return (
-    <Layout isSearch={true}>
+    <LayoutComponent isSearch={true}>
       <div style={{ padding: '70px' }}>
         <div>
           <Row gutter={16}>
@@ -251,7 +251,7 @@ const Category = props => {
           </Row>
         </div>
       </div>
-    </Layout>
+    </LayoutComponent>
   )
 }
 

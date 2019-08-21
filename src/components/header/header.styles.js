@@ -7,10 +7,10 @@ export const HeaderMenu = styled(Menu)`
   display: flex;
   justify-content: space-between;
   line-height: 40px;
-  position: auto;
+  position: fixed;
   z-index: 1;
   width: 100%;
-  background: linear-gradient(to left, #009fff, #ec2f4b);
+  // background: linear-gradient(to left, #009fff, #ec2f4b);
 `
 
 export const HeaderItem = styled(Item)`

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import Layout from '../components/layout'
+import LayoutComponent from '../components/layout'
 import SEO from '../components/seo'
 import Home from '../components/home/home.component'
 import '../base.css'
@@ -8,7 +8,7 @@ import store from '../redux'
 
 const IndexPage = () => (
   <Provider store={store}>
-    <Layout isSearch={true}>
+    <LayoutComponent isSearch={true}>
       <SEO
         title="ResearchKernel"
         keywords={[
@@ -20,7 +20,7 @@ const IndexPage = () => (
         ]}
       />
       <Home />
-    </Layout>
+    </LayoutComponent>
   </Provider>
 )
 

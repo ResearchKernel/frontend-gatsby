@@ -7,7 +7,7 @@ import './layout.css'
 // import 'hamburgers/dist/hamburgers.css'
 import './../base.scss'
 
-const Layout = ({ children, isSearch }) => (
+const LayoutComponent = ({ children, isSearch }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -27,8 +27,8 @@ const Layout = ({ children, isSearch }) => (
   />
 )
 
-Layout.propTypes = {
+LayoutComponent.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default LayoutComponent
