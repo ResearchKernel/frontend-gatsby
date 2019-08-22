@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import Waves from '../common/Waves'
 import {
   ComponentHeader,
   MainHeading,
@@ -9,6 +8,8 @@ import {
   FlexContainer,
   CustomSearch,
 } from './Search.style'
+
+import Waves from 'css-waves/Waves'
 
 const SearchContainer = () => {
   return (
