@@ -1,3 +1,5 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -199,7 +201,7 @@ html {
 /* ## Change Body font styles here */
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
